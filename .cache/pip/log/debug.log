@@ -10,3 +10,20 @@ Collecting django
 Installing collected packages: django
 
 Successfully installed django-1.7.5
+Collecting south
+  Downloading South-1.0.2.tar.gz (96kB)
+Installing collected packages: south
+  Running setup.py install for south
+Successfully installed south-1.0.2
+Requirement already satisfied (use --upgrade to upgrade): django in /home/ubuntu/env/lib/python2.7/site-packages
+Requirement already satisfied (use --upgrade to upgrade): django in /home/ubuntu/env/lib/python2.7/site-packages
+Collecting django from git+http://github.com/django/django.git@stable/1.5.x#egg=django
+  Cloning http://github.com/django/django.git (to stable/1.5.x) to /tmp/pip-build-GGd6GH/django
+Installing collected packages: django
+  Found existing installation: Django 1.7.5
+    Uninstalling Django-1.7.5:
+      Successfully uninstalled Django-1.7.5
+  Running setup.py install for django
+    changing mode of build/scripts-2.7/django-admin.py from 664 to 775
+    changing mode of /home/ubuntu/env/bin/django-admin.py to 775
+Successfully installed django-1.5.12
