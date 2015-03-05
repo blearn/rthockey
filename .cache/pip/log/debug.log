@@ -27,3 +27,892 @@ Installing collected packages: django
     changing mode of build/scripts-2.7/django-admin.py from 664 to 775
     changing mode of /home/ubuntu/env/bin/django-admin.py to 775
 Successfully installed django-1.5.12
+Collecting fabric
+  Downloading Fabric-1.10.1.tar.gz (209kB)
+Collecting paramiko>=1.10 (from fabric)
+  Downloading paramiko-1.15.2-py2.py3-none-any.whl (165kB)
+Collecting ecdsa>=0.11 (from paramiko>=1.10->fabric)
+  Downloading ecdsa-0.13-py2.py3-none-any.whl (86kB)
+Collecting pycrypto!=2.4,>=2.1 (from paramiko>=1.10->fabric)
+  Downloading pycrypto-2.6.1.tar.gz (446kB)
+Installing collected packages: pycrypto, ecdsa, paramiko, fabric
+  Running setup.py install for pycrypto
+    checking for gcc... gcc
+    checking whether the C compiler works... yes
+    checking for C compiler default output file name... a.out
+    checking for suffix of executables...
+    checking whether we are cross compiling... no
+    checking for suffix of object files... o
+    checking whether we are using the GNU C compiler... yes
+    checking whether gcc accepts -g... yes
+    checking for gcc option to accept ISO C89... none needed
+    checking for __gmpz_init in -lgmp... no
+    checking for __gmpz_init in -lmpir... no
+    checking whether mpz_powm is declared... no
+    checking whether mpz_powm_sec is declared... no
+    checking how to run the C preprocessor... gcc -E
+    checking for grep that handles long lines and -e... /bin/grep
+    checking for egrep... /bin/grep -E
+    checking for ANSI C header files... yes
+    checking for sys/types.h... yes
+    checking for sys/stat.h... yes
+    checking for stdlib.h... yes
+    checking for string.h... yes
+    checking for memory.h... yes
+    checking for strings.h... yes
+    checking for inttypes.h... yes
+    checking for stdint.h... yes
+    checking for unistd.h... yes
+    checking for inttypes.h... (cached) yes
+    checking limits.h usability... yes
+    checking limits.h presence... yes
+    checking for limits.h... yes
+    checking stddef.h usability... yes
+    checking stddef.h presence... yes
+    checking for stddef.h... yes
+    checking for stdint.h... (cached) yes
+    checking for stdlib.h... (cached) yes
+    checking for string.h... (cached) yes
+    checking wchar.h usability... yes
+    checking wchar.h presence... yes
+    checking for wchar.h... yes
+    checking for inline... inline
+    checking for int16_t... yes
+    checking for int32_t... yes
+    checking for int64_t... yes
+    checking for int8_t... yes
+    checking for size_t... yes
+    checking for uint16_t... yes
+    checking for uint32_t... yes
+    checking for uint64_t... yes
+    checking for uint8_t... yes
+    checking for stdlib.h... (cached) yes
+    checking for GNU libc compatible malloc... yes
+    checking for memmove... yes
+    checking for memset... yes
+    configure: creating ./config.status
+    config.status: creating src/config.h
+    warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
+    building 'Crypto.Hash._MD2' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD2.c -o build/temp.linux-x86_64-2.7/src/MD2.o
+    src/MD2.c:31:20: fatal error: Python.h: No such file or directory
+     #include "Python.h"
+                        ^
+    compilation terminated.
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+    Complete output from command /home/ubuntu/env/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip-build-F_Eui7/pycrypto/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-f5tbEL-record/install-record.txt --single-version-externally-managed --compile --install-headers /home/ubuntu/env/include/site/python2.7:
+    running install
+    
+    running build
+    
+    running build_py
+    
+    creating build
+    
+    creating build/lib.linux-x86_64-2.7
+    
+    creating build/lib.linux-x86_64-2.7/Crypto
+    
+    copying lib/Crypto/__init__.py -> build/lib.linux-x86_64-2.7/Crypto
+    
+    copying lib/Crypto/pct_warnings.py -> build/lib.linux-x86_64-2.7/Crypto
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/SHA384.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/MD5.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/MD4.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/SHA256.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/hashalgo.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/SHA512.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/SHA224.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/RIPEMD.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/HMAC.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/SHA.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    copying lib/Crypto/Hash/MD2.py -> build/lib.linux-x86_64-2.7/Crypto/Hash
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/PKCS1_OAEP.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/CAST.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/Blowfish.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/DES.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/ARC4.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/DES3.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/ARC2.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/XOR.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/PKCS1_v1_5.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/AES.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    copying lib/Crypto/Cipher/blockalgo.py -> build/lib.linux-x86_64-2.7/Crypto/Cipher
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/_number_new.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/asn1.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/winrandom.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/Counter.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/RFC1751.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/number.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/randpool.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/py3compat.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    copying lib/Crypto/Util/py21compat.py -> build/lib.linux-x86_64-2.7/Crypto/Util
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Random
+    
+    copying lib/Crypto/Random/_UserFriendlyRNG.py -> build/lib.linux-x86_64-2.7/Crypto/Random
+    
+    copying lib/Crypto/Random/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Random
+    
+    copying lib/Crypto/Random/random.py -> build/lib.linux-x86_64-2.7/Crypto/Random
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Random/Fortuna
+    
+    copying lib/Crypto/Random/Fortuna/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Random/Fortuna
+    
+    copying lib/Crypto/Random/Fortuna/FortunaAccumulator.py -> build/lib.linux-x86_64-2.7/Crypto/Random/Fortuna
+    
+    copying lib/Crypto/Random/Fortuna/FortunaGenerator.py -> build/lib.linux-x86_64-2.7/Crypto/Random/Fortuna
+    
+    copying lib/Crypto/Random/Fortuna/SHAd256.py -> build/lib.linux-x86_64-2.7/Crypto/Random/Fortuna
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    copying lib/Crypto/Random/OSRNG/nt.py -> build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    copying lib/Crypto/Random/OSRNG/fallback.py -> build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    copying lib/Crypto/Random/OSRNG/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    copying lib/Crypto/Random/OSRNG/rng_base.py -> build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    copying lib/Crypto/Random/OSRNG/posix.py -> build/lib.linux-x86_64-2.7/Crypto/Random/OSRNG
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest
+    
+    copying lib/Crypto/SelfTest/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest
+    
+    copying lib/Crypto/SelfTest/st_common.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_XOR.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_AES.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_CAST.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_pkcs1_15.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_DES3.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_ARC4.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_ARC2.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_Blowfish.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_DES.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/common.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    copying lib/Crypto/SelfTest/Cipher/test_pkcs1_oaep.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Cipher
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_SHA256.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_MD2.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_HMAC.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_SHA512.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_SHA.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_SHA384.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_SHA224.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_RIPEMD.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/common.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_MD5.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    copying lib/Crypto/SelfTest/Hash/test_MD4.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Hash
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    copying lib/Crypto/SelfTest/Protocol/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    copying lib/Crypto/SelfTest/Protocol/test_KDF.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    copying lib/Crypto/SelfTest/Protocol/test_chaffing.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    copying lib/Crypto/SelfTest/Protocol/test_rfc1751.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    copying lib/Crypto/SelfTest/Protocol/test_AllOrNothing.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Protocol
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    copying lib/Crypto/SelfTest/PublicKey/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    copying lib/Crypto/SelfTest/PublicKey/test_RSA.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    copying lib/Crypto/SelfTest/PublicKey/test_DSA.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    copying lib/Crypto/SelfTest/PublicKey/test_importKey.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    copying lib/Crypto/SelfTest/PublicKey/test_ElGamal.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/PublicKey
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random
+    
+    copying lib/Crypto/SelfTest/Random/test_random.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random
+    
+    copying lib/Crypto/SelfTest/Random/test__UserFriendlyRNG.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random
+    
+    copying lib/Crypto/SelfTest/Random/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random
+    
+    copying lib/Crypto/SelfTest/Random/test_rpoolcompat.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/Fortuna
+    
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_FortunaAccumulator.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/Fortuna
+    
+    copying lib/Crypto/SelfTest/Random/Fortuna/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/Fortuna
+    
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_FortunaGenerator.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/Fortuna
+    
+    copying lib/Crypto/SelfTest/Random/Fortuna/test_SHAd256.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/Fortuna
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_posix.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_winrandom.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_generic.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_nt.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    copying lib/Crypto/SelfTest/Random/OSRNG/test_fallback.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Random/OSRNG
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    copying lib/Crypto/SelfTest/Util/test_number.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    copying lib/Crypto/SelfTest/Util/test_Counter.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    copying lib/Crypto/SelfTest/Util/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    copying lib/Crypto/SelfTest/Util/test_winrandom.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    copying lib/Crypto/SelfTest/Util/test_asn1.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Util
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/SelfTest/Signature
+    
+    copying lib/Crypto/SelfTest/Signature/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Signature
+    
+    copying lib/Crypto/SelfTest/Signature/test_pkcs1_15.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Signature
+    
+    copying lib/Crypto/SelfTest/Signature/test_pkcs1_pss.py -> build/lib.linux-x86_64-2.7/Crypto/SelfTest/Signature
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Protocol
+    
+    copying lib/Crypto/Protocol/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Protocol
+    
+    copying lib/Crypto/Protocol/KDF.py -> build/lib.linux-x86_64-2.7/Crypto/Protocol
+    
+    copying lib/Crypto/Protocol/Chaffing.py -> build/lib.linux-x86_64-2.7/Crypto/Protocol
+    
+    copying lib/Crypto/Protocol/AllOrNothing.py -> build/lib.linux-x86_64-2.7/Crypto/Protocol
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/pubkey.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/_RSA.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/_slowmath.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/_DSA.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/ElGamal.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/DSA.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    copying lib/Crypto/PublicKey/RSA.py -> build/lib.linux-x86_64-2.7/Crypto/PublicKey
+    
+    creating build/lib.linux-x86_64-2.7/Crypto/Signature
+    
+    copying lib/Crypto/Signature/__init__.py -> build/lib.linux-x86_64-2.7/Crypto/Signature
+    
+    copying lib/Crypto/Signature/PKCS1_PSS.py -> build/lib.linux-x86_64-2.7/Crypto/Signature
+    
+    copying lib/Crypto/Signature/PKCS1_v1_5.py -> build/lib.linux-x86_64-2.7/Crypto/Signature
+    
+    running build_ext
+    
+    running build_configure
+    
+    checking for gcc... gcc
+    
+    checking whether the C compiler works... yes
+    
+    checking for C compiler default output file name... a.out
+    
+    checking for suffix of executables...
+    
+    checking whether we are cross compiling... no
+    
+    checking for suffix of object files... o
+    
+    checking whether we are using the GNU C compiler... yes
+    
+    checking whether gcc accepts -g... yes
+    
+    checking for gcc option to accept ISO C89... none needed
+    
+    checking for __gmpz_init in -lgmp... no
+    
+    checking for __gmpz_init in -lmpir... no
+    
+    checking whether mpz_powm is declared... no
+    
+    checking whether mpz_powm_sec is declared... no
+    
+    checking how to run the C preprocessor... gcc -E
+    
+    checking for grep that handles long lines and -e... /bin/grep
+    
+    checking for egrep... /bin/grep -E
+    
+    checking for ANSI C header files... yes
+    
+    checking for sys/types.h... yes
+    
+    checking for sys/stat.h... yes
+    
+    checking for stdlib.h... yes
+    
+    checking for string.h... yes
+    
+    checking for memory.h... yes
+    
+    checking for strings.h... yes
+    
+    checking for inttypes.h... yes
+    
+    checking for stdint.h... yes
+    
+    checking for unistd.h... yes
+    
+    checking for inttypes.h... (cached) yes
+    
+    checking limits.h usability... yes
+    
+    checking limits.h presence... yes
+    
+    checking for limits.h... yes
+    
+    checking stddef.h usability... yes
+    
+    checking stddef.h presence... yes
+    
+    checking for stddef.h... yes
+    
+    checking for stdint.h... (cached) yes
+    
+    checking for stdlib.h... (cached) yes
+    
+    checking for string.h... (cached) yes
+    
+    checking wchar.h usability... yes
+    
+    checking wchar.h presence... yes
+    
+    checking for wchar.h... yes
+    
+    checking for inline... inline
+    
+    checking for int16_t... yes
+    
+    checking for int32_t... yes
+    
+    checking for int64_t... yes
+    
+    checking for int8_t... yes
+    
+    checking for size_t... yes
+    
+    checking for uint16_t... yes
+    
+    checking for uint32_t... yes
+    
+    checking for uint64_t... yes
+    
+    checking for uint8_t... yes
+    
+    checking for stdlib.h... (cached) yes
+    
+    checking for GNU libc compatible malloc... yes
+    
+    checking for memmove... yes
+    
+    checking for memset... yes
+    
+    configure: creating ./config.status
+    
+    config.status: creating src/config.h
+    
+    warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
+    
+    building 'Crypto.Hash._MD2' extension
+    
+    creating build/temp.linux-x86_64-2.7
+    
+    creating build/temp.linux-x86_64-2.7/src
+    
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD2.c -o build/temp.linux-x86_64-2.7/src/MD2.o
+    
+    src/MD2.c:31:20: fatal error: Python.h: No such file or directory
+    
+     #include "Python.h"
+    
+                        ^
+    
+    compilation terminated.
+    
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+    
+    ----------------------------------------
+    Command "/home/ubuntu/env/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip-build-F_Eui7/pycrypto/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-f5tbEL-record/install-record.txt --single-version-externally-managed --compile --install-headers /home/ubuntu/env/include/site/python2.7" failed with error code 1 in /tmp/pip-build-F_Eui7/pycrypto
+Collecting python-dev
+  Could not find any downloads that satisfy the requirement python-dev
+  No distributions at all found for python-dev
+Collecting fabric
+  Using cached Fabric-1.10.1.tar.gz
+Collecting paramiko>=1.10 (from fabric)
+  Using cached paramiko-1.15.2-py2.py3-none-any.whl
+Collecting ecdsa>=0.11 (from paramiko>=1.10->fabric)
+  Using cached ecdsa-0.13-py2.py3-none-any.whl
+Collecting pycrypto!=2.4,>=2.1 (from paramiko>=1.10->fabric)
+  Using cached pycrypto-2.6.1.tar.gz
+Installing collected packages: pycrypto, ecdsa, paramiko, fabric
+  Running setup.py install for pycrypto
+    checking for gcc... gcc
+    checking whether the C compiler works... yes
+    checking for C compiler default output file name... a.out
+    checking for suffix of executables...
+    checking whether we are cross compiling... no
+    checking for suffix of object files... o
+    checking whether we are using the GNU C compiler... yes
+    checking whether gcc accepts -g... yes
+    checking for gcc option to accept ISO C89... none needed
+    checking for __gmpz_init in -lgmp... no
+    checking for __gmpz_init in -lmpir... no
+    checking whether mpz_powm is declared... no
+    checking whether mpz_powm_sec is declared... no
+    checking how to run the C preprocessor... gcc -E
+    checking for grep that handles long lines and -e... /bin/grep
+    checking for egrep... /bin/grep -E
+    checking for ANSI C header files... yes
+    checking for sys/types.h... yes
+    checking for sys/stat.h... yes
+    checking for stdlib.h... yes
+    checking for string.h... yes
+    checking for memory.h... yes
+    checking for strings.h... yes
+    checking for inttypes.h... yes
+    checking for stdint.h... yes
+    checking for unistd.h... yes
+    checking for inttypes.h... (cached) yes
+    checking limits.h usability... yes
+    checking limits.h presence... yes
+    checking for limits.h... yes
+    checking stddef.h usability... yes
+    checking stddef.h presence... yes
+    checking for stddef.h... yes
+    checking for stdint.h... (cached) yes
+    checking for stdlib.h... (cached) yes
+    checking for string.h... (cached) yes
+    checking wchar.h usability... yes
+    checking wchar.h presence... yes
+    checking for wchar.h... yes
+    checking for inline... inline
+    checking for int16_t... yes
+    checking for int32_t... yes
+    checking for int64_t... yes
+    checking for int8_t... yes
+    checking for size_t... yes
+    checking for uint16_t... yes
+    checking for uint32_t... yes
+    checking for uint64_t... yes
+    checking for uint8_t... yes
+    checking for stdlib.h... (cached) yes
+    checking for GNU libc compatible malloc... yes
+    checking for memmove... yes
+    checking for memset... yes
+    configure: creating ./config.status
+    config.status: creating src/config.h
+    warning: GMP or MPIR library not found; Not building Crypto.PublicKey._fastmath.
+    building 'Crypto.Hash._MD2' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD2.c -o build/temp.linux-x86_64-2.7/src/MD2.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/MD2.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD2.so
+    building 'Crypto.Hash._MD4' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/MD4.c -o build/temp.linux-x86_64-2.7/src/MD4.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/MD4.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_MD4.so
+    building 'Crypto.Hash._SHA256' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA256.c -o build/temp.linux-x86_64-2.7/src/SHA256.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA256.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA256.so
+    building 'Crypto.Hash._SHA224' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA224.c -o build/temp.linux-x86_64-2.7/src/SHA224.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA224.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA224.so
+    building 'Crypto.Hash._SHA384' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA384.c -o build/temp.linux-x86_64-2.7/src/SHA384.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA384.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA384.so
+    building 'Crypto.Hash._SHA512' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/SHA512.c -o build/temp.linux-x86_64-2.7/src/SHA512.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/SHA512.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_SHA512.so
+    building 'Crypto.Hash._RIPEMD160' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -DPCT_LITTLE_ENDIAN=1 -Isrc/ -I/usr/include/python2.7 -c src/RIPEMD160.c -o build/temp.linux-x86_64-2.7/src/RIPEMD160.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/RIPEMD160.o -o build/lib.linux-x86_64-2.7/Crypto/Hash/_RIPEMD160.so
+    building 'Crypto.Cipher._AES' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/AES.c -o build/temp.linux-x86_64-2.7/src/AES.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/AES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_AES.so
+    building 'Crypto.Cipher._ARC2' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC2.c -o build/temp.linux-x86_64-2.7/src/ARC2.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/ARC2.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC2.so
+    building 'Crypto.Cipher._Blowfish' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/Blowfish.c -o build/temp.linux-x86_64-2.7/src/Blowfish.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/Blowfish.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_Blowfish.so
+    building 'Crypto.Cipher._CAST' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/CAST.c -o build/temp.linux-x86_64-2.7/src/CAST.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/CAST.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_CAST.so
+    building 'Crypto.Cipher._DES' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES.c -o build/temp.linux-x86_64-2.7/src/DES.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/DES.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES.so
+    building 'Crypto.Cipher._DES3' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -Isrc/libtom/ -I/usr/include/python2.7 -c src/DES3.c -o build/temp.linux-x86_64-2.7/src/DES3.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/DES3.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_DES3.so
+    building 'Crypto.Cipher._ARC4' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/ARC4.c -o build/temp.linux-x86_64-2.7/src/ARC4.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/ARC4.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_ARC4.so
+    building 'Crypto.Cipher._XOR' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/XOR.c -o build/temp.linux-x86_64-2.7/src/XOR.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/XOR.o -o build/lib.linux-x86_64-2.7/Crypto/Cipher/_XOR.so
+    building 'Crypto.Util.strxor' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/strxor.c -o build/temp.linux-x86_64-2.7/src/strxor.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/strxor.o -o build/lib.linux-x86_64-2.7/Crypto/Util/strxor.so
+    building 'Crypto.Util._counter' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -fwrapv -Wall -Wstrict-prototypes -fPIC -std=c99 -O3 -fomit-frame-pointer -Isrc/ -I/usr/include/python2.7 -c src/_counter.c -o build/temp.linux-x86_64-2.7/src/_counter.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/src/_counter.o -o build/lib.linux-x86_64-2.7/Crypto/Util/_counter.so
+
+
+  Running setup.py install for fabric
+    Installing fab script to /home/ubuntu/env/bin
+Successfully installed ecdsa-0.13 fabric-1.10.1 paramiko-1.15.2 pycrypto-2.6.1
+Requirement already satisfied (use --upgrade to upgrade): django in /home/ubuntu/env/lib/python2.7/site-packages
+Collecting django from https://pypi.python.org/packages/py2.py3/D/Django/Django-1.7.5-py2.py3-none-any.whl#md5=d6b529414f3093c848a69996979a1bea
+  Using cached Django-1.7.5-py2.py3-none-any.whl
+Installing collected packages: django
+  Found existing installation: Django 1.5.12
+    Uninstalling Django-1.5.12:
+      Successfully uninstalled Django-1.5.12
+
+Successfully installed django-1.7.5
+Collecting Django==1.5.12
+  Downloading Django-1.5.12-py2.py3-none-any.whl (8.3MB)
+Installing collected packages: Django
+  Found existing installation: Django 1.7.5
+    Uninstalling Django-1.7.5:
+      Successfully uninstalled Django-1.7.5
+
+Successfully installed Django-1.5.12
+Collecting django from https://pypi.python.org/packages/py2.py3/D/Django/Django-1.7.5-py2.py3-none-any.whl#md5=d6b529414f3093c848a69996979a1bea
+  Using cached Django-1.7.5-py2.py3-none-any.whl
+Installing collected packages: django
+  Found existing installation: Django 1.5.12
+    Uninstalling Django-1.5.12:
+      Successfully uninstalled Django-1.5.12
+
+Successfully installed django-1.7.5
+Uninstalling South-1.0.2:
+  /home/ubuntu/env/lib/python2.7/site-packages/South-1.0.2-py2.7.egg-info
+  /home/ubuntu/env/lib/python2.7/site-packages/south/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/actions.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/actions.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/changes.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/changes.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/freezer.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/creator/freezer.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/firebird.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/firebird.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/generic.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/generic.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/mysql.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/mysql.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/oracle.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/oracle.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/postgresql_psycopg2.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/postgresql_psycopg2.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sql_server/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sql_server/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sql_server/pyodbc.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sql_server/pyodbc.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sqlite3.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/db/sqlite3.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/exceptions.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/exceptions.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/hacks/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/hacks/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/hacks/django_1_0.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/hacks/django_1_0.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/annoying_autoonetoone.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/annoying_autoonetoone.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_audit_log.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_audit_log.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_objectpermissions.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_objectpermissions.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_tagging.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_tagging.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_taggit.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_taggit.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_timezones.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/django_timezones.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/geodjango.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/introspection_plugins/geodjango.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/logger.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/logger.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/convert_to_south.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/convert_to_south.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/datamigration.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/datamigration.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/graphmigrations.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/graphmigrations.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/migrate.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/migrate.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/migrationcheck.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/migrationcheck.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/schemamigration.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/schemamigration.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/startmigration.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/startmigration.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/syncdb.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/syncdb.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/test.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/test.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/testserver.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/management/commands/testserver.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/base.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/base.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/migrators.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/migrators.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/utils.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/migration/utils.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/modelsinspector.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/modelsinspector.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/orm.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/orm.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/signals.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/signals.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/test_shim.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/test_shim.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/autodetection.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/autodetection.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0001_depends_on_unmigrated.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0001_depends_on_unmigrated.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0002_depends_on_unknown.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0002_depends_on_unknown.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0003_depends_on_higher.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0003_depends_on_higher.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0004_higher.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/0004_higher.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/brokenapp/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/migrations/0001_first.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/migrations/0001_first.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_a/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/migrations/0001_first.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/migrations/0001_first.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/circular_b/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db_firebird.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db_firebird.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db_mysql.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/db_mysql.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0001_a.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0001_a.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0002_a.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0002_a.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0003_a.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0003_a.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0004_a.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0004_a.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0005_a.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/0005_a.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_a/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0001_b.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0001_b.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0002_b.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0002_b.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0003_b.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0003_b.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0004_b.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0004_b.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0005_b.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/0005_b.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_b/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0001_c.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0001_c.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0002_c.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0002_c.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0003_c.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0003_c.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0004_c.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0004_c.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0005_c.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/0005_c.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/deps_c/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/emptyapp/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0001_spam.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0001_spam.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0002_eggs.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0002_eggs.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0003_alter_spam.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/0003_alter_spam.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/fakeapp/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/freezer.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/freezer.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/inspector.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/inspector.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/logger.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/logger.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/logic.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/logic.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/non_managed/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0001_first.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0001_first.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0002_second.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0002_second.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0003_third.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/0003_third.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/tests/otherfakeapp/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/datetime_utils.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/datetime_utils.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/py3.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/utils/py3.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/south/v2.py
+  /home/ubuntu/env/lib/python2.7/site-packages/south/v2.pyc
+  Successfully uninstalled South-1.0.2
