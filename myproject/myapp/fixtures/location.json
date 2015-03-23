@@ -1,0 +1,21 @@
+[
+    {
+        "model": "location",
+        "pk": 1,
+        "fields": {
+            "name": "National Hockey Training Centre",
+            "address": "#110 – 20740 Mufford Cresent, Langley, BC"
+        }
+    },
+    {
+        "model": "session",
+        "pk": 1,
+        "fields": {
+            "title": "Learn to Skate - Spring 2015",
+            "description": "Join our 13-week Learn to Skate program",
+            "agegroup": "8-9 years old (2007-2008 birthdays)",
+            "cost": "35",
+            "location": "1"
+        }
+    }
+]

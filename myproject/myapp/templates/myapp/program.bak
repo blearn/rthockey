@@ -1,0 +1,12 @@
+<h2>Program: {{ program.title }}</h2>
+<p>Description: {{ program.description }}</p>
+<p>Cost: ${{ program.cost }}.00 (tax incl)</p>
+{% if program_sessions_list %}
+    <ul>
+    {% for sess in program_sessions_list %}
+        <li><a href="{% url 'session' session_id=sess.id %}">{{sess.title}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sessions are available.</p>
+{% endif %}

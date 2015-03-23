@@ -7,14 +7,22 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0~/width
+
 # Command Line History (newest to oldest):
 :wq
-:q!
+:w
 :q
-:set nu
+:q!
+:Wq
 :set ts=4
+:set nu
 
 # Search String History (newest to oldest):
+?/width
+?/container
+?/STATIC_ROOT
 
 # Expression History (newest to oldest):
 
@@ -23,163 +31,683 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+"0	LINE	0
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
 ""1	LINE	0
-	from django.db import models
-	
-	STATUS_CHOICES = (
-	    ('d', 'Draft'),
-	    ('p', 'Published'),
-	    ('w', 'Withdrawn'),
-	)
-	
-	class Article(models.Model):
-	    title = models.CharField(max_length=100)
-	    body = models.TextField()
-	    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-	
-	    def __str__(self):              # __unicode__ on Python 2
-	        return self.title
-	
-		def make_published(modeladmin, request, queryset):
-	    	queryset.update(status='p')
-		make_published.short_description = "Mark selected stories as published"
-	
-		class ArticleAdmin(admin.ModelAdmin):
-	    	list_display = ['title', 'status']
-		    ordering = ['title']
-	    	actions = [make_published]
-	
-		admin.site.register(Article, ArticleAdmin)
+	padding-top:244px;
+"2	LINE	0
+	z-index:2;
+"3	LINE	0
+	width:100%;
+"4	LINE	0
+	-1px -1px 0 #fff,
+	1px -1px 0 #fff,
+	-1px 1px 0 #fff,
+	1px 1px 0 #fff;
+"5	LINE	0
+	    <div id="main">
+"6	LINE	0
+	    <div id="main">
+"7	LINE	0
+	    <div id="main">
+"8	LINE	0
+	background-repeat: no-repeat;
+"9	LINE	0
+	!width: 100%;
+"-	CHAR	0
+	e
 
 # File marks:
-'0  39  0  ~/myproject/myproject/settings.py
-'1  37  0  ~/myproject/myproject/settings.py
-'2  16  0  ~/myproject/myapp/models.py
-'3  1  0  ~/myproject/myapp/admin.py
-'4  11  0  ~/myproject/myapp/admin.py
-'5  1  0  ~/myproject/myapp/models.py
-'6  14  0  ~/myproject/myapp/admin.py
-'7  17  0  ~/myproject/myapp/Article.py
-'8  1  0  ~/myproject/myapp/models.py
-'9  1  24  ~/myproject/myapp/models.py
+'0  24  35  ~/myproject/myapp/templates/myapp/footer.html
+'1  12  145  ~/myproject/myapp/templates/myapp/program.html
+'2  6  39  ~/myproject/myapp/templates/myapp/session.html
+'3  6  0  ~/myproject/myapp/templates/myapp/index.html
+'4  144  0  ~/myproject/myapp/static/myapp/style.css
+'5  30  2  ~/myproject/myapp/static/myapp/position.css
+'6  152  0  ~/myproject/myapp/static/myapp/style.css
+'7  1  0  ~/myproject/myapp/templates/myapp/index.html
+'8  134  19  ~/myproject/myapp/static/myapp/style.css
+'9  130  8  ~/myproject/myapp/static/myapp/style.css
 
 # Jumplist (newest first):
--'  39  0  ~/myproject/myproject/settings.py
--'  1  0  ~/myproject/myproject/settings.py
--'  37  0  ~/myproject/myproject/settings.py
--'  16  0  ~/myproject/myapp/models.py
--'  1  0  ~/myproject/myapp/models.py
+-'  24  35  ~/myproject/myapp/templates/myapp/footer.html
+-'  1  8  ~/myproject/myapp/templates/myapp/footer.html
+-'  12  145  ~/myproject/myapp/templates/myapp/program.html
+-'  1  0  ~/myproject/myapp/templates/myapp/program.html
+-'  6  39  ~/myproject/myapp/templates/myapp/session.html
+-'  1  0  ~/myproject/myapp/templates/myapp/session.html
+-'  6  0  ~/myproject/myapp/templates/myapp/index.html
+-'  1  0  ~/myproject/myapp/templates/myapp/index.html
+-'  144  0  ~/myproject/myapp/static/myapp/style.css
+-'  1  0  ~/myproject/myapp/static/myapp/style.css
+-'  30  2  ~/myproject/myapp/static/myapp/position.css
+-'  1  0  ~/myproject/myapp/static/myapp/position.css
+-'  152  0  ~/myproject/myapp/static/myapp/style.css
+-'  156  0  ~/myproject/myapp/static/myapp/style.css
+-'  142  0  ~/myproject/myapp/static/myapp/style.css
+-'  130  0  ~/myproject/myapp/static/myapp/style.css
+-'  127  0  ~/myproject/myapp/static/myapp/style.css
+-'  82  4  ~/myproject/myapp/static/myapp/style.css
+-'  72  18  ~/myproject/myapp/static/myapp/style.css
+-'  134  19  ~/myproject/myapp/static/myapp/style.css
+-'  149  16  ~/myproject/myapp/static/myapp/style.css
+-'  139  15  ~/myproject/myapp/static/myapp/style.css
+-'  2  22  ~/myproject/myapp/static/myapp/style.css
+-'  2  35  ~/myproject/myapp/templates/myapp/session.html
+-'  3  4  ~/myproject/myapp/templates/myapp/session.html
+-'  3  3  ~/myproject/myapp/templates/myapp/program.html
+-'  2  0  ~/myproject/myapp/templates/myapp/index.html
+-'  26  18  ~/myproject/myapp/templates/myapp/header.html
+-'  1  0  ~/myproject/myapp/templates/myapp/header.html
+-'  10  16  ~/myproject/myapp/static/myapp/style.css
+-'  119  6  ~/myproject/myapp/static/myapp/style.css
+-'  151  5  ~/myproject/myapp/static/myapp/style.css
+-'  120  6  ~/myproject/myapp/static/myapp/style.css
+-'  126  6  ~/myproject/myapp/static/myapp/style.css
+-'  28  11  ~/myproject/myapp/templates/myapp/header.html
+-'  26  51  ~/myproject/myapp/templates/myapp/footer.html
+-'  158  0  ~/myproject/myapp/static/myapp/style.css
+-'  45  12  ~/myproject/myapp/static/myapp/style.css
+-'  124  11  ~/myproject/myapp/static/myapp/style.css
+-'  2  81  ~/myproject/myapp/templates/includes/tabs.html
+-'  1  0  ~/myproject/myapp/templates/includes/tabs.html
+-'  3  79  ~/myproject/myapp/templates/includes/tabs.html
+-'  27  0  ~/myproject/myapp/templates/myapp/header.html
+-'  15  94  ~/myproject/myapp/templates/myapp/header.html
+-'  153  0  ~/myproject/myapp/static/myapp/style.css
+-'  4  0  ~/myproject/myapp/static/myapp/position.css
+-'  133  0  ~/myproject/myapp/static/myapp/style.css
+-'  69  0  ~/myproject/myapp/static/myapp/style.css
+-'  23  0  ~/myproject/myapp/templates/myapp/header.html
+-'  1  0  ~/readme
+-'  15  0  ~/readme
+-'  14  23  ~/myproject/myapp/admin.py
 -'  1  0  ~/myproject/myapp/admin.py
--'  11  0  ~/myproject/myapp/admin.py
--'  14  0  ~/myproject/myapp/admin.py
--'  17  0  ~/myproject/myapp/Article.py
--'  1  0  ~/myproject/myapp/Article.py
--'  10  0  ~/myproject/myproject/urls.py
+-'  13  48  ~/myproject/myapp/admin.py
+-'  40  0  ~/myproject/myapp/admin.py
+-'  10  0  ~/myproject/myapp/admin.py
+-'  16  17  ~/myproject/myapp/admin.py
+-'  7  21  ~/myproject/myapp/admin.py
+-'  15  88  ~/myproject/myapp/views.py
+-'  1  0  ~/myproject/myapp/views.py
+-'  1  0  ~/myproject/myapp/models.py
+-'  7  7  ~/myproject/myapp/templates/myapp/program.html
+-'  8  115  ~/myproject/myapp/templates/myapp/program.html
+-'  20  23  ~/myproject/myapp/templates/myapp/program.html
+-'  3  0  ~/myproject/myapp/templates/myapp/index.html
+-'  10  17  ~/myproject/myapp/templates/myapp/program.html
+-'  11  14  ~/myproject/myapp/templates/myapp/program.html
+-'  9  7  ~/myproject/myapp/templates/myapp/program.html
+-'  1  0  ~/myproject/myapp/urls.py
+-'  26  17  ~/myproject/myapp/templates/myapp/index.html
+-'  33  31  ~/myproject/myapp/templates/myapp/header.html
+-'  25  8  ~/myproject/myapp/templates/myapp/index.html
+-'  9  19  ~/myproject/myapp/urls.py
+-'  8  18  ~/myproject/myapp/urls.py
+-'  5  0  ~/myproject/myapp/templates/myapp/index.html
+-'  14  4  ~/myproject/myapp/templates/myapp/program.html
+-'  17  37  ~/myproject/myapp/views.py
+-'  27  59  ~/myproject/myapp/views.py
+-'  16  84  ~/myproject/myapp/views.py
+-'  1  0  ~/myproject/myproject/templates/admin/base_site.html
 -'  1  0  ~/myproject/myproject/urls.py
--'  53  4  ~/myproject/myproject/settings.py
--'  52  0  ~/myproject/myproject/settings.py
--'  38  0  ~/myproject/myproject/settings.py
--'  13  0  ~/myproject/myproject/settings.py
--'  48  0  ~/myproject/myproject/settings.py
--'  17  33  /etc/apache2/sites-enabled/mysite.conf
--'  1  0  /etc/apache2/sites-enabled/mysite.conf
--'  18  22  /etc/apache2/sites-enabled/mysite.conf
--'  19  12  /etc/apache2/sites-enabled/mysite.conf
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  40  11  ~/myproject/myproject/settings.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  17  33  /etc/apache2/sites-enabled/mysite.conf
--'  1  0  /etc/apache2/sites-enabled/mysite.conf
--'  18  22  /etc/apache2/sites-enabled/mysite.conf
--'  19  12  /etc/apache2/sites-enabled/mysite.conf
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  17  33  /etc/apache2/sites-enabled/mysite.conf
--'  1  0  /etc/apache2/sites-enabled/mysite.conf
--'  18  22  /etc/apache2/sites-enabled/mysite.conf
--'  19  12  /etc/apache2/sites-enabled/mysite.conf
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  17  33  /etc/apache2/sites-enabled/mysite.conf
--'  1  0  /etc/apache2/sites-enabled/mysite.conf
--'  18  22  /etc/apache2/sites-enabled/mysite.conf
--'  19  12  /etc/apache2/sites-enabled/mysite.conf
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  15  48  ~/dev/ubuntu/myproject/fabfile.py
--'  1  0  ~/dev/ubuntu/myproject/fabfile.py
--'  17  33  /etc/apache2/sites-enabled/mysite.conf
--'  1  0  /etc/apache2/sites-enabled/mysite.conf
--'  18  22  /etc/apache2/sites-enabled/mysite.conf
--'  19  12  /etc/apache2/sites-enabled/mysite.conf
+-'  14  0  ~/myproject/myapp/views.py
+-'  10  0  ~/myproject/myapp/urls.py
+-'  15  0  ~/myproject/myapp/templates/myapp/program.html
+-'  20  0  ~/myproject/myapp/views.py
+-'  49  4  ~/myproject/myapp/models.py
+-'  7  0  ~/myproject/myapp/views.py
+-'  55  0  ~/myproject/myapp/models.py
+-'  6  0  ~/myproject/myapp/templates/myapp/program.html
+-'  18  31  ~/myproject/myapp/views.py
+-'  23  0  ~/myproject/myapp/views.py
+-'  17  36  ~/myproject/myapp/templates/myapp/program.html
+-'  31  12  ~/myproject/myproject/settings.py
+-'  1  0  ~/myproject/myproject/settings.py
+-'  8  36  ~/myproject/myapp/admin.py
+-'  11  0  ~/myproject/myapp/models.py
+-'  144  0  ~/myproject/myapp/static/myapp/style.css
+-'  1  0  ~/myproject/myapp/static/myapp/style.css
 
 # History of marks within files (newest to oldest):
 
-> ~/myproject/myproject/settings.py
-	"	39	0
-	^	39	0
-	.	40	0
-	+	40	11
-	+	48	0
-	+	53	0
-	+	53	4
+> ~/myproject/myapp/templates/myapp/footer.html
+	"	24	35
+	^	26	61
+	.	26	60
+	+	1	0
+	+	1	0
+	+	26	60
+
+> ~/myproject/myapp/templates/myapp/program.html
+	"	12	145
+	^	12	146
+	.	12	145
+	+	1	19
+	+	6	6
+	+	5	27
+	+	6	20
+	+	1	12
+	+	5	15
+	+	6	46
+	+	1	0
+	+	1	31
+	+	22	0
+	+	18	10
+	+	11	79
+	+	15	8
+	+	14	15
+	+	17	36
+	+	1	0
+	+	5	0
+	+	10	37
+	+	7	21
+	+	10	15
+	+	11	12
+	+	13	12
+	+	14	83
+	+	12	30
+	+	10	17
+	+	12	34
+	+	14	0
+	+	12	34
+	+	7	94
+	+	12	91
+	+	8	3
+	+	8	53
+	+	5	0
+	+	1	0
+	+	1	0
+	+	3	0
+	+	18	11
+	+	21	0
+	+	22	0
+	+	12	71
+	+	10	13
+	+	11	14
+	+	10	0
+	+	11	0
+	+	12	85
+	+	3	0
+	+	3	0
+	+	3	7
+	+	19	5
+	+	1	51
+	+	19	31
+	+	20	23
+	+	8	116
+	+	18	7
+	+	17	7
+	+	16	7
+	+	15	7
+	+	14	3
+	+	13	11
+	+	12	19
+	+	11	7
+	+	10	7
+	+	14	11
+	+	9	7
+	+	7	7
+	+	8	7
+	+	6	7
+	+	5	7
+	+	4	7
+	+	1	33
+	+	2	3
+	+	4	12
+	+	5	11
+	+	12	150
+	+	8	64
+	+	12	145
+
+> ~/myproject/myapp/templates/myapp/session.html
+	"	6	39
+	^	6	59
+	.	6	58
+	+	1	12
+	+	1	0
+	+	2	50
+	+	4	0
+	+	4	21
+	+	9	23
+	+	8	20
+	+	9	25
+	+	10	32
+	+	4	30
+	+	7	59
+	+	6	36
+	+	4	27
+	+	6	32
+	+	7	41
+	+	5	39
+	+	6	66
+	+	2	0
+	+	3	0
+	+	2	35
+	+	6	58
+
+> ~/myproject/myapp/templates/myapp/index.html
+	"	6	0
+	^	2	23
+	.	2	22
+	+	1	7
+	+	1	19
+	+	1	35
+	+	1	64
+	+	1	16
+	+	1	34
+	+	1	121
+	+	1	67
+	+	1	24
+	+	1	11
+	+	1	0
+	+	1	8
+	+	1	44
+	+	1	3
+	+	1	0
+	+	1	9
+	+	1	0
+	+	18	0
+	+	1	21
+	+	1	82
+	+	1	25
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	73
+	+	1	0
+	+	1	52
+	+	1	10
+	+	1	3
+	+	1	7
+	+	1	11
+	+	1	3
+	+	1	7
+	+	1	7
+	+	1	3
+	+	1	3
+	+	1	31
+	+	1	0
+	+	1	56
+	+	1	31
+	+	1	0
+	+	27	0
+	+	1	56
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	33
+	+	1	63
+	+	1	35
+	+	1	43
+	+	1	19
+	+	1	16
+	+	1	20
+	+	1	16
+	+	1	17
+	+	1	20
+	+	1	17
+	+	4	147
+	+	1	37
+	+	1	0
+	+	27	0
+	+	2	7
+	+	1	26
+	+	26	26
+	+	1	17
+	+	26	17
+	+	2	22
+
+> ~/myproject/myapp/static/myapp/style.css
+	"	144	0
+	^	144	0
+	.	145	0
+	+	114	0
+	+	115	0
+	+	126	6
+	+	10	3
+	+	11	0
+	+	10	16
+	+	11	9
+	+	12	7
+	+	118	16
+	+	119	7
+	+	120	6
+	+	149	18
+	+	151	8
+	+	152	10
+	+	152	7
+	+	151	5
+	+	119	6
+	+	10	1
+	+	124	0
+	+	139	0
+	+	149	15
+	+	139	16
+	+	124	15
+	+	118	15
+	+	10	16
+	+	119	5
+	+	142	5
+	+	2	22
+	+	139	16
+	+	142	6
+	+	143	13
+	+	144	22
+	+	142	9
+	+	139	15
+	+	142	4
+	+	144	21
+	+	27	6
+	+	33	15
+	+	33	14
+	+	33	14
+	+	33	0
+	+	29	0
+	+	27	10
+	+	36	0
+	+	40	17
+	+	126	7
+	+	149	16
+	+	120	7
+	+	119	5
+	+	143	7
+	+	142	0
+	+	143	0
+	+	126	1
+	+	130	9
+	+	127	14
+	+	129	14
+	+	3	0
+	+	60	0
+	+	61	0
+	+	7	0
+	+	8	0
+	+	129	15
+	+	127	14
+	+	129	14
+	+	124	9
+	+	134	34
+	+	130	8
+	+	124	1
+	+	126	0
+	+	134	19
+	+	142	5
+	+	139	16
+	+	128	17
+	+	140	5
+	+	128	13
+	+	146	0
+	+	135	0
+	+	135	0
+	+	136	1
+	+	144	23
+	+	130	13
+	+	131	17
+	+	132	17
+	+	128	16
+	+	149	17
+	+	151	17
+	+	152	17
+	+	152	6
+	+	151	0
+	+	152	0
+	+	151	7
+	+	142	6
+	+	140	6
+	+	153	0
+	+	150	8
+	+	144	22
+	+	142	0
+	+	144	0
+	+	144	0
+	+	145	0
+
+> ~/myproject/myapp/static/myapp/position.css
+	"	30	2
+	^	30	3
+	.	30	2
+	+	1	10
+	+	1	11
+	+	1	0
+	+	1	0
+	+	1	10
+	+	1	1
+	+	30	2
+
+> ~/myproject/myapp/templates/myapp/header.html
+	"	26	18
+	^	26	19
+	.	26	18
+	+	1	0
+	+	2	0
+	+	32	31
+	+	33	0
+	+	15	8
+	+	15	94
+	+	26	18
+
+> ~/myproject/myapp/templates/includes/tabs.html
+	"	2	81
+	^	2	82
+	.	2	81
+	+	5	0
+	+	2	79
+	+	3	83
+	+	4	83
+	+	2	52
+	+	3	52
+	+	4	52
+	+	2	80
+	+	3	79
+	+	2	75
+	+	3	81
+	+	2	81
+
+> ~/readme
+	"	1	0
+	^	15	128
+	.	15	121
+	+	5	20
+	+	6	0
+	+	5	3
+	+	10	39
+	+	8	23
+	+	11	0
+	+	15	121
+
+> ~/myproject/myapp/admin.py
+	"	14	23
+	^	13	49
+	.	13	48
+	+	38	50
+	+	1	32
+	+	2	32
+	+	6	0
+	+	6	0
+	+	6	0
+	+	6	0
+	+	8	0
+	+	9	4
+	+	10	4
+	+	38	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	6	0
+	+	8	0
+	+	10	49
+	+	18	0
+	+	18	1
+	+	18	0
+	+	18	44
+	+	28	79
+	+	23	0
+	+	24	0
+	+	25	1
 	+	26	0
-	+	40	0
+	+	27	1
+	+	28	0
+	+	28	81
+	+	25	25
+	+	27	25
+	+	1	1
+	+	10	27
+	+	8	63
+	+	6	12
+	+	8	28
+	+	9	13
+	+	25	25
+	+	27	26
+	+	38	35
+	+	2	31
+	+	3	31
+	+	12	0
+	+	12	12
+	+	13	17
+	+	14	13
+	+	15	1
+	+	18	19
+	+	39	42
+	+	10	28
+	+	15	28
+	+	30	19
+	+	33	25
+	+	35	26
+	+	36	81
+	+	18	38
+	+	20	22
+	+	40	43
+	+	19	35
+	+	4	33
+	+	8	36
+	+	13	36
+	+	16	17
+	+	10	49
+	+	10	31
+	+	10	31
+	+	16	0
+	+	11	21
+	+	16	21
+	+	11	0
+	+	7	21
+	+	8	3
+	+	7	18
+	+	16	18
+	+	9	3
+	+	10	3
+	+	13	3
+	+	14	3
+	+	15	4
+	+	13	48
+
+> ~/myproject/myapp/views.py
+	"	15	88
+	^	15	89
+	.	15	89
+	+	11	29
+	+	9	25
+	+	8	59
+	+	9	61
+	+	8	33
+	+	4	31
+	+	1	36
+	+	6	0
+	+	1	50
+	+	9	4
+	+	11	0
+	+	10	50
+	+	9	51
+	+	10	34
+	+	11	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	4	0
+	+	1	35
+	+	12	17
+	+	1	30
+	+	21	70
+	+	13	3
+	+	14	47
+	+	18	17
+	+	19	29
+	+	21	66
+	+	10	32
+	+	4	31
+	+	8	32
+	+	9	51
+	+	12	26
+	+	14	47
+	+	18	17
+	+	19	29
+	+	21	66
+	+	12	41
+	+	18	51
+	+	19	47
+	+	20	0
+	+	20	0
+	+	20	17
+	+	20	29
+	+	5	31
+	+	20	7
+	+	21	91
+	+	22	32
+	+	24	15
+	+	24	0
+	+	24	0
+	+	28	0
+	+	18	0
+	+	24	52
+	+	25	32
+	+	26	0
+	+	28	0
+	+	26	29
+	+	20	0
+	+	21	0
+	+	26	47
+	+	27	0
+	+	20	0
+	+	27	49
+	+	12	31
+	+	20	40
+	+	14	52
+	+	15	0
+	+	15	83
+	+	16	66
+	+	18	0
+	+	16	65
+	+	15	62
+	+	12	25
+	+	14	44
+	+	15	76
+	+	12	21
+	+	14	41
+	+	15	60
+	+	20	77
+	+	16	83
+	+	20	49
+	+	15	78
+	+	16	84
+	+	28	0
+	+	16	86
+	+	17	36
+	+	16	8
+	+	17	8
+	+	16	85
+	+	27	60
+	+	9	37
+	+	16	65
+	+	15	89
+	i	16	19
 
 > ~/myproject/myapp/models.py
-	"	16	0
-	^	16	0
-	.	15	25
+	"	1	0
+	^	18	0
+	.	17	24
 	+	1	25
 	+	1	51
 	+	1	4
@@ -191,26 +719,185 @@
 	+	1	0
 	+	1	4
 	+	1	28
-	+	15	25
+	+	30	25
+	+	24	56
+	+	23	3
+	+	24	3
+	+	33	71
+	+	32	17
+	+	4	32
+	+	2	0
+	+	1	14
+	+	23	55
+	+	23	0
+	+	23	0
+	+	24	0
+	+	23	4
+	+	19	12
+	+	21	14
+	+	26	7
+	+	26	31
+	+	49	39
+	+	13	43
+	+	14	29
+	+	13	39
+	+	14	45
+	+	27	41
+	+	50	41
+	+	27	41
+	+	56	42
+	+	60	56
+	+	34	0
+	+	35	0
+	+	40	27
+	+	35	0
+	+	23	52
+	+	24	52
+	+	52	18
+	+	55	0
+	+	27	0
+	+	53	13
+	+	53	4
+	+	53	82
+	+	22	78
+	+	53	77
+	+	38	38
+	+	39	34
+	+	58	38
+	+	59	40
+	+	58	44
+	+	39	40
+	+	38	44
+	+	17	24
 
-> ~/myproject/myapp/admin.py
+> ~/myproject/myapp/urls.py
 	"	1	0
-	^	11	1
-	.	11	0
-	+	13	50
-	+	1	32
-	+	2	32
-	+	4	0
-	+	5	0
-	+	6	0
-	+	8	0
-	+	9	0
-	+	10	4
-	+	11	4
-	+	13	0
-	+	9	0
-	+	10	0
+	^	9	20
+	.	9	19
+	+	7	0
+	+	3	9
 	+	11	0
+	+	7	0
+	+	6	42
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	11	0
+	+	10	0
+	+	8	64
+	+	7	15
+	+	8	64
+	+	9	47
+	+	8	47
+	+	9	10
+	+	8	11
+	+	9	18
+	+	8	18
+	+	9	19
+
+> ~/myproject/myproject/templates/admin/base_site.html
+	"	1	0
+	^	4	0
+	.	3	28
+	+	3	64
+	+	6	88
+	+	3	49
+	+	6	77
+	+	3	28
+
+> ~/myproject/myproject/urls.py
+	"	1	0
+	^	8	58
+	.	8	57
+	+	10	20
+	+	3	19
+	+	10	1
+	+	8	57
+
+> ~/myproject/myproject/settings.py
+	"	31	12
+	^	31	13
+	.	31	12
+	+	43	11
+	+	51	0
+	+	56	0
+	+	56	4
+	+	26	0
+	+	43	0
+	+	70	51
+	+	50	0
+	+	70	0
+	+	71	0
+	+	27	0
+	+	27	0
+	+	28	0
+	+	27	0
+	+	27	0
+	+	28	0
+	+	27	49
+	+	89	13
+	+	88	30
+	+	31	12
+
+> ~/myproject/myapp/fixtures/location.json
+	"	1	0
+	^	18	27
+	.	18	26
+	+	3	18
+	+	19	9
+	+	20	4
+	+	15	69
+	+	17	25
+	+	18	26
+
+> ~/myproject/myapp/fixtures/locations.fx
+	"	10	0
+	^	10	1
+	.	10	0
+	+	6	27
+	+	7	20
+	+	6	51
+	+	10	0
+
+> ~/myproject/myapp/templates/myapp/detail.html
+	"	1	0
+	^	1	10
+	.	1	9
+	+	1	9
+
+> ~/myproject/myapp/static/myapp/pos
+	"	1	0
+
+> ~/myproject/manage.py
+	"	1	0
+
+> ~/myproject/myapp/templates/myapp/static/myapp/position.css
+	"	29	0
+	^	29	1
+	.	29	0
+	+	29	0
+
+> ~/myproject/myapp/templates/myapp/static/myapp/style.css
+	"	4	0
+	^	4	0
+	.	3	1
+	+	59	0
+	+	3	1
+
+> ~/.vimrc
+	"	1	0
+	^	3	13
+	.	3	12
+	+	2	6
+	+	3	12
+
+> ~/myproject/myapp/templates/admin/base_site.html
+	"	6	76
+	^	6	77
+	.	6	77
+	+	3	51
+	+	6	77
 
 > ~/myproject/myapp/Article.py
 	"	17	0
@@ -218,14 +905,6 @@
 	.	18	0
 	+	17	50
 	+	18	0
-
-> ~/myproject/myproject/urls.py
-	"	10	0
-	^	10	1
-	.	10	1
-	+	10	20
-	+	3	19
-	+	10	1
 
 > /etc/apache2/sites-enabled/mysite.conf
 	"	17	33
