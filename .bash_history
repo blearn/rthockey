@@ -766,3 +766,647 @@ exit
 source ~/env/bin/activate
 cd myproject/
 python manage.py runserver 0.0.0.0:8000
+iptables -nvl
+iptables -v
+iptables
+iptables --help
+iptables -Lvn
+sudo iptables -Lvn
+sudo iptables -L
+ls
+pwd
+source ~/env/bin/activate
+cd myproject/
+ls
+ls -lf
+ls -l
+git add .
+git status
+git commit -a -m 'index, program, session pages working. need registration form. initial style implemented'
+sudo git commit -a -m 'index, program, session pages working. need registration form. initial style implemented'
+git config --global user.name "blearn"
+git config --global user.email "benlearn@hotmail.com"
+git commit --amend --reset-author
+git remote add origin https://github.com/blearn/rthockey.git
+ls
+vi README.md
+git add .
+git commit -a -m 'adding README.md file'
+git push -u origin master
+ls
+sudo vim myapp/templates/myapp/index.html 
+ls
+python manage.py runserver 0.0.0.0:8000
+sudo vim myapp/templates/includes/
+sudo vim myapp/templates/includes/tabs.html 
+ls
+sudo vim myapp/urls.py
+sudo vim myapp/views.py
+sudo vim myapp/templates/myapp/program.html
+cp myapp/templates/myapp/program.html myapp/templates/myapp/selectProgram.html
+source ~/env/bin/activate
+cd myproject/myapp/
+ls
+cd templates/myapp/
+ls
+sudo vim selectProgram.html 
+python ~/myproject/manage.py runserver 0.0.0.0:8000
+ls
+cd ../..
+ls
+sudo vim urls.py
+python ~/myproject/manage.py runserver 0.0.0.0:8000
+sudo vim urls.py
+python ~/myproject/manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+cd templates/
+ls
+cd myapp/
+ls
+cd ../..
+ls
+sudo vim views.py
+sudo vim templates/myapp/selectProgram.html 
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/header.html 
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/selectProgram.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/sudo vim program.html
+ls
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/session.html 
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+ls
+cd myproject/myapp/
+ls
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/index.html 
+sudo vim urls.py
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/header.html 
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myapp/
+ls
+sudo vim templates/myapp/header.html 
+sudo vim static/myapp/style.css 
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/index.html 
+sudo vim templates/includes/tabs.html 
+~/myproject/python manage.py runserver 0.0.0.0:8000
+ls
+sudo vim templates/myapp/selectProgram.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/session.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/session.html 
+sudo vim templates/myapp/
+sudo vim templates/myapp/program.html 
+sudo vim urls.py
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/session.html 
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/selectProgram.html 
+sudo vim templates/myapp/session.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/register_session.html
+sudo vim templates/myapp/register_program.html
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/register_session.html
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+ps aux | grep 8000
+sudo kill 15105
+sudo kill 15251
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/program.html 
+sudo vim admin.py
+sudo vim models.py
+sudo vim templates/myapp/program.html 
+cd myproject/
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+sudo vim templates/myapp/program.html 
+sudo vim urls.py
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/register_program.html 
+ls
+sudo vim templates/myapp/registerForm.py
+sudo vim views.py
+sudo vim templates/myapp/registerForm.py
+sudo mv templates/myapp/registerForm.py .
+ls
+sudo mv registerForm.py forms.py
+ls
+sudo vim templates/myapp/register.html 
+sudo vim templates/myapp/program.
+sudo vim templates/myapp/program.html 
+sudo vim urls.py
+sudo vim views.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/program.html 
+sudo vim views.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/register.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/register.html 
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+cd fixtures/
+ls
+cd ../
+ls
+sudo vim templates/myapp/session.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/register.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+sudo vim templates/myapp/register.html 
+sudo vim models.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/program.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim forms.py
+sudo vim templates/myapp/register_program.html 
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+cd myproject/
+cd myapp/
+ls
+sudo vim forms.py
+sudo vim views.py
+sudo vim urls.py
+cd myproject/
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim static/myapp/style.css 
+cd static/myapp/
+ls
+sudo vim static/myapp/style.css 
+ls
+sudo vim style.css 
+cd ../..
+ls
+cd templates/includes/
+ls
+sudo vim tabs.html 
+cd ../../
+ls
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo mv templates/myapp/footer.html templates/myapp/old_footer.html
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim templates/includes/tabs.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/footer.html 
+sudo vim templates/myapp/contact.html
+sudo vim templates/includes/tabs.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/includes/tabs.html 
+cd myproject/
+ls
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim forms.py
+cd myproject/
+ls
+cd myapp/
+ls
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/includes/tabs.html 
+sudo vim forms.py
+sudo vim models.py
+ls
+cd ..
+ls
+python manage.py syncdb
+sudo vim myapp/models.py
+source ~/env/bin/activate
+python manage.py syncdb
+python manage.py makemigrations
+python manage.py migrate
+ls
+cd myapp/
+ls
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim views.py
+sudo vim forms.py
+sudo vim views.py
+sudo vim models.py
+sudo vim forms.py
+sudo vim urls.py
+sudo vim templates/myapp/register_program.html 
+sudo vim views.py
+sudo vim templates/myapp/register_session.html 
+sudo vim templates/myapp/register.html 
+sudo vim templates/myapp/
+sudo vim urls.py
+sudo vim views.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim models.py
+sudo vim forms.py
+sudo vim views.py
+sudo vim forms.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html 
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim views.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/register_program.html 
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/myapp/player.html 
+sudo vim views.py
+sudo vim models.py
+sudo vim forms.py
+sudo vim admin.py
+sudo vim models.py
+cd ..
+python manage.py makemigrations
+sudo vim models.py
+cd myapp/
+sudo vim models.py
+cd ..
+ls
+sudo vim manage.py
+ls
+source ~/env/bin/activate
+python manage.py makemigrations
+cd myapp/
+sudo vim models.py
+cd ..
+python manage.py makemigrations
+python manage.py migrate
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+ls
+sudo vim static/myapp/style.css 
+sudo vim forms.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim forms.py
+sudo cp forms.py old_forms.py
+ls
+sudo vim forms.py
+source ~/env/bin/activate
+sudo vim views.py
+exit
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim forms.py
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+ls
+sudo vim views.py
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/player.html 
+sudo vim urls.py
+ls
+sudo vim forms.py
+sudo vim models.py
+sudo vim templates/myapp/register_program.html 
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+clear
+source ~/env/bin/activate
+sudo apt-get install libjpeg libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev
+cd /var/www/
+ls
+cd html/
+ls
+vim index.html 
+cd ..
+mkdir rthockey
+sudo mkdir rthockey
+cd rthockey/
+ls
+exit
+cd myproject/
+cd myapp/
+ls
+sudo vim old_forms.py 
+sudo vim forms.py
+sudo vim old_forms.py 
+sudo vim forms.py
+sudo vim templates/myapp/register_program.html 
+sudo vim static/myapp/style.css 
+sudo vim models.py
+sudo vim templates/myapp/slideshow.html
+sudo vim admin.py
+cd ..
+ls
+cd myproject/
+ls
+sudo vim settings.py
+cd ../myapp/
+ls
+sudo vim urls.py
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/slideshow.html
+sudo vim models.py
+source ~/env/bin/activate
+pip install pillow
+pip install --upgrade pip
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myapp/
+ls
+exit
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/slideshow.html 
+sudo vim models.py
+exit
+cd myproject/
+ls
+cd myapp/
+ls
+sudo vim models.py
+ls
+sudo vim models.py
+sudo vim admin.py
+sudo vim models.py
+python ../manage.py makemigrations
+source ~/env/bin/activate
+python ../manage.py makemigrations
+sudo vim models.py
+sudo vim ../myproject/settings.py
+ls
+sudo mkdir media
+ls
+sudo vim urls.py
+sudo vim ../myproject/settings.py
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim models.py
+sudo vim urls.py
+sudo vim admin.py
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+pip uninstall PIL
+sudo apt-get install libjpeg-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install libpng12-dev
+sudo pip install PIL
+sudo apt-get uninstall pillow
+sudo apt-get remove pillow
+pip uninstall pillow
+sudo apt-get install pillow
+sudo pip install pillow
+python ../manage.py runserver 0.0.0.0:8000
+pip freeze | grep Pillow
+sudo pip install pillow
+sudo pip --upgrade pillow
+sudo pip uninstall pillow
+pip install pillow
+python ../manage.py runserver 0.0.0.0:8000
+ls
+vim readme 
+scp -i pair_o_keys.pem /drives/c/xampp/htdocs/rthockey/rink.jpg ubuntu@ec2-52-10-204-204.us-west-2.compu    te.amazonaws.com:~/.
+vim readme 
+cd myproject/
+ls
+cd myproject/
+ls
+cd ../..
+ls
+cd dev/
+ls
+cd ..
+ls
+cd myproject/myapp/
+ls
+cd templates/myapp/
+ls
+cd ..
+ls
+cd includes/
+ls
+cd ..
+ls
+cd ..
+ls
+cd migrations/
+ls
+cd ../static/
+ls
+cd myapp/
+ls
+cd ~
+ls
+mv rthockey.rar myproject/myapp/media/
+sudo mv rthockey.rar myproject/myapp/media/
+ls
+history
+cd myproject/myapp/media/
+ls
+rar -xvf rthockey.rar .
+sudo apt-get install rar
+cd ~
+ls
+vim readme
+exit
+cd myproject/
+ls
+cd myproject/
+ls
+sudo vim settings.py
+cd ..
+ls
+cd myapp/
+ls
+cd static/
+ls
+cd myapp/
+ls
+cd ../../media/
+ls
+mv rthockey.rar ../static/myapp/
+sudo mv rthockey.rar ../static/myapp/
+ls
+cd ..
+ls
+sudo rm media/
+sudo rmdir media/
+cd static/myapp/
+ls
+tar -zxvf rthockey.rar
+cd ..
+ls
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/slideshow.html 
+sudo mv templates/myapp/slideshow.html
+sudo mv templates/myapp/slideshow.html templates/myapp/old_slideshow.html
+sudo vim templates/myapp/slideshow.html 
+sudo cp templates/myapp/old_slideshow.html templates/myapp/slideshow.html
+sudo vim templates/myapp/slideshow.html 
+sudo vim views.py
+sudo vim templates/myapp/slideshow.html 
+exit
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+ls
+cd myproject/
+ls
+sudo pip install djangocms-slideshow
+cd myproject/
+ls
+sudo vim settings.py
+cd ..
+ls
+./manage.py migrate slideshow
+ls
+cd ..
+ls
+cd myproject/
+ls
+cd myapp/
+ls
+sudo vim models.py
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+cd myapp/
+ls
+sudo vim views.py
+sudo vim admin.py
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/slideshow.html 
+python ../manage.py migrate slideshow
+cd ..
+ls
+cd myproject/
+ls
+sudo vim settings.py
+ls
+cd ..
+ls
+python manage.py runserver 0.0.0.0:8000
+cd myproject/
+ls
+sudo vim settings.py
+cd -
+python manage.py runserver 0.0.0.0:8000

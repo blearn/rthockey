@@ -916,3 +916,405 @@ Uninstalling South-1.0.2:
   /home/ubuntu/env/lib/python2.7/site-packages/south/v2.py
   /home/ubuntu/env/lib/python2.7/site-packages/south/v2.pyc
   Successfully uninstalled South-1.0.2
+You are using pip version 6.0.8, however version 6.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting pil
+  Could not find any downloads that satisfy the requirement pil
+  Some externally hosted files were ignored as access to them may be unreliable (use --allow-external pil to allow).
+  No distributions at all found for pil
+You are using pip version 6.0.8, however version 6.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting pillow
+  Downloading Pillow-2.8.1.tar.gz (9.0MB)
+    Single threaded build, not installing mp_compile: 1 processes
+Installing collected packages: pillow
+  Running setup.py install for pillow
+    Single threaded build, not installing mp_compile: 1 processes
+    building 'PIL._imaging' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c _imaging.c -o build/temp.linux-x86_64-2.7/_imaging.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c decode.c -o build/temp.linux-x86_64-2.7/decode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c encode.c -o build/temp.linux-x86_64-2.7/encode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c map.c -o build/temp.linux-x86_64-2.7/map.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c display.c -o build/temp.linux-x86_64-2.7/display.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c outline.c -o build/temp.linux-x86_64-2.7/outline.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c path.c -o build/temp.linux-x86_64-2.7/path.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Access.c -o build/temp.linux-x86_64-2.7/libImaging/Access.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/AlphaComposite.c -o build/temp.linux-x86_64-2.7/libImaging/AlphaComposite.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Resample.c -o build/temp.linux-x86_64-2.7/libImaging/Resample.o
+    libImaging/Resample.c:87:45: warning: always_inline function might not be inlinable [-Wattributes]
+     static float __attribute__((always_inline)) i2f(int v) {
+                                                 ^
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Bands.c -o build/temp.linux-x86_64-2.7/libImaging/Bands.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/BitDecode.c -o build/temp.linux-x86_64-2.7/libImaging/BitDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Blend.c -o build/temp.linux-x86_64-2.7/libImaging/Blend.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Chops.c -o build/temp.linux-x86_64-2.7/libImaging/Chops.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Convert.c -o build/temp.linux-x86_64-2.7/libImaging/Convert.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/ConvertYCbCr.c -o build/temp.linux-x86_64-2.7/libImaging/ConvertYCbCr.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Copy.c -o build/temp.linux-x86_64-2.7/libImaging/Copy.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Crc32.c -o build/temp.linux-x86_64-2.7/libImaging/Crc32.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Crop.c -o build/temp.linux-x86_64-2.7/libImaging/Crop.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Dib.c -o build/temp.linux-x86_64-2.7/libImaging/Dib.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Draw.c -o build/temp.linux-x86_64-2.7/libImaging/Draw.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Effects.c -o build/temp.linux-x86_64-2.7/libImaging/Effects.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/EpsEncode.c -o build/temp.linux-x86_64-2.7/libImaging/EpsEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/File.c -o build/temp.linux-x86_64-2.7/libImaging/File.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Fill.c -o build/temp.linux-x86_64-2.7/libImaging/Fill.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Filter.c -o build/temp.linux-x86_64-2.7/libImaging/Filter.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/FliDecode.c -o build/temp.linux-x86_64-2.7/libImaging/FliDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Geometry.c -o build/temp.linux-x86_64-2.7/libImaging/Geometry.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/GetBBox.c -o build/temp.linux-x86_64-2.7/libImaging/GetBBox.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/GifDecode.c -o build/temp.linux-x86_64-2.7/libImaging/GifDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/GifEncode.c -o build/temp.linux-x86_64-2.7/libImaging/GifEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/HexDecode.c -o build/temp.linux-x86_64-2.7/libImaging/HexDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Histo.c -o build/temp.linux-x86_64-2.7/libImaging/Histo.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/JpegDecode.c -o build/temp.linux-x86_64-2.7/libImaging/JpegDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/JpegEncode.c -o build/temp.linux-x86_64-2.7/libImaging/JpegEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/LzwDecode.c -o build/temp.linux-x86_64-2.7/libImaging/LzwDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Matrix.c -o build/temp.linux-x86_64-2.7/libImaging/Matrix.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/ModeFilter.c -o build/temp.linux-x86_64-2.7/libImaging/ModeFilter.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/MspDecode.c -o build/temp.linux-x86_64-2.7/libImaging/MspDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Negative.c -o build/temp.linux-x86_64-2.7/libImaging/Negative.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Offset.c -o build/temp.linux-x86_64-2.7/libImaging/Offset.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Pack.c -o build/temp.linux-x86_64-2.7/libImaging/Pack.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/PackDecode.c -o build/temp.linux-x86_64-2.7/libImaging/PackDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Palette.c -o build/temp.linux-x86_64-2.7/libImaging/Palette.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Paste.c -o build/temp.linux-x86_64-2.7/libImaging/Paste.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Quant.c -o build/temp.linux-x86_64-2.7/libImaging/Quant.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/QuantOctree.c -o build/temp.linux-x86_64-2.7/libImaging/QuantOctree.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/QuantHash.c -o build/temp.linux-x86_64-2.7/libImaging/QuantHash.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/QuantHeap.c -o build/temp.linux-x86_64-2.7/libImaging/QuantHeap.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/PcdDecode.c -o build/temp.linux-x86_64-2.7/libImaging/PcdDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/PcxDecode.c -o build/temp.linux-x86_64-2.7/libImaging/PcxDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/PcxEncode.c -o build/temp.linux-x86_64-2.7/libImaging/PcxEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Point.c -o build/temp.linux-x86_64-2.7/libImaging/Point.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/RankFilter.c -o build/temp.linux-x86_64-2.7/libImaging/RankFilter.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/RawDecode.c -o build/temp.linux-x86_64-2.7/libImaging/RawDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/RawEncode.c -o build/temp.linux-x86_64-2.7/libImaging/RawEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Storage.c -o build/temp.linux-x86_64-2.7/libImaging/Storage.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/SunRleDecode.c -o build/temp.linux-x86_64-2.7/libImaging/SunRleDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/TgaRleDecode.c -o build/temp.linux-x86_64-2.7/libImaging/TgaRleDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Unpack.c -o build/temp.linux-x86_64-2.7/libImaging/Unpack.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/UnpackYCC.c -o build/temp.linux-x86_64-2.7/libImaging/UnpackYCC.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/UnsharpMask.c -o build/temp.linux-x86_64-2.7/libImaging/UnsharpMask.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/XbmDecode.c -o build/temp.linux-x86_64-2.7/libImaging/XbmDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/XbmEncode.c -o build/temp.linux-x86_64-2.7/libImaging/XbmEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/ZipDecode.c -o build/temp.linux-x86_64-2.7/libImaging/ZipDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/ZipEncode.c -o build/temp.linux-x86_64-2.7/libImaging/ZipEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/TiffDecode.c -o build/temp.linux-x86_64-2.7/libImaging/TiffDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Incremental.c -o build/temp.linux-x86_64-2.7/libImaging/Incremental.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Jpeg2KDecode.c -o build/temp.linux-x86_64-2.7/libImaging/Jpeg2KDecode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/Jpeg2KEncode.c -o build/temp.linux-x86_64-2.7/libImaging/Jpeg2KEncode.o
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c libImaging/BoxBlur.c -o build/temp.linux-x86_64-2.7/libImaging/BoxBlur.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/_imaging.o build/temp.linux-x86_64-2.7/decode.o build/temp.linux-x86_64-2.7/encode.o build/temp.linux-x86_64-2.7/map.o build/temp.linux-x86_64-2.7/display.o build/temp.linux-x86_64-2.7/outline.o build/temp.linux-x86_64-2.7/path.o build/temp.linux-x86_64-2.7/libImaging/Access.o build/temp.linux-x86_64-2.7/libImaging/AlphaComposite.o build/temp.linux-x86_64-2.7/libImaging/Resample.o build/temp.linux-x86_64-2.7/libImaging/Bands.o build/temp.linux-x86_64-2.7/libImaging/BitDecode.o build/temp.linux-x86_64-2.7/libImaging/Blend.o build/temp.linux-x86_64-2.7/libImaging/Chops.o build/temp.linux-x86_64-2.7/libImaging/Convert.o build/temp.linux-x86_64-2.7/libImaging/ConvertYCbCr.o build/temp.linux-x86_64-2.7/libImaging/Copy.o build/temp.linux-x86_64-2.7/libImaging/Crc32.o build/temp.linux-x86_64-2.7/libImaging/Crop.o build/temp.linux-x86_64-2.7/libImaging/Dib.o build/temp.linux-x86_64-2.7/libImaging/Draw.o build/temp.linux-x86_64-2.7/libImaging/Effects.o build/temp.linux-x86_64-2.7/libImaging/EpsEncode.o build/temp.linux-x86_64-2.7/libImaging/File.o build/temp.linux-x86_64-2.7/libImaging/Fill.o build/temp.linux-x86_64-2.7/libImaging/Filter.o build/temp.linux-x86_64-2.7/libImaging/FliDecode.o build/temp.linux-x86_64-2.7/libImaging/Geometry.o build/temp.linux-x86_64-2.7/libImaging/GetBBox.o build/temp.linux-x86_64-2.7/libImaging/GifDecode.o build/temp.linux-x86_64-2.7/libImaging/GifEncode.o build/temp.linux-x86_64-2.7/libImaging/HexDecode.o build/temp.linux-x86_64-2.7/libImaging/Histo.o build/temp.linux-x86_64-2.7/libImaging/JpegDecode.o build/temp.linux-x86_64-2.7/libImaging/JpegEncode.o build/temp.linux-x86_64-2.7/libImaging/LzwDecode.o build/temp.linux-x86_64-2.7/libImaging/Matrix.o build/temp.linux-x86_64-2.7/libImaging/ModeFilter.o build/temp.linux-x86_64-2.7/libImaging/MspDecode.o build/temp.linux-x86_64-2.7/libImaging/Negative.o build/temp.linux-x86_64-2.7/libImaging/Offset.o build/temp.linux-x86_64-2.7/libImaging/Pack.o build/temp.linux-x86_64-2.7/libImaging/PackDecode.o build/temp.linux-x86_64-2.7/libImaging/Palette.o build/temp.linux-x86_64-2.7/libImaging/Paste.o build/temp.linux-x86_64-2.7/libImaging/Quant.o build/temp.linux-x86_64-2.7/libImaging/QuantOctree.o build/temp.linux-x86_64-2.7/libImaging/QuantHash.o build/temp.linux-x86_64-2.7/libImaging/QuantHeap.o build/temp.linux-x86_64-2.7/libImaging/PcdDecode.o build/temp.linux-x86_64-2.7/libImaging/PcxDecode.o build/temp.linux-x86_64-2.7/libImaging/PcxEncode.o build/temp.linux-x86_64-2.7/libImaging/Point.o build/temp.linux-x86_64-2.7/libImaging/RankFilter.o build/temp.linux-x86_64-2.7/libImaging/RawDecode.o build/temp.linux-x86_64-2.7/libImaging/RawEncode.o build/temp.linux-x86_64-2.7/libImaging/Storage.o build/temp.linux-x86_64-2.7/libImaging/SunRleDecode.o build/temp.linux-x86_64-2.7/libImaging/TgaRleDecode.o build/temp.linux-x86_64-2.7/libImaging/Unpack.o build/temp.linux-x86_64-2.7/libImaging/UnpackYCC.o build/temp.linux-x86_64-2.7/libImaging/UnsharpMask.o build/temp.linux-x86_64-2.7/libImaging/XbmDecode.o build/temp.linux-x86_64-2.7/libImaging/XbmEncode.o build/temp.linux-x86_64-2.7/libImaging/ZipDecode.o build/temp.linux-x86_64-2.7/libImaging/ZipEncode.o build/temp.linux-x86_64-2.7/libImaging/TiffDecode.o build/temp.linux-x86_64-2.7/libImaging/Incremental.o build/temp.linux-x86_64-2.7/libImaging/Jpeg2KDecode.o build/temp.linux-x86_64-2.7/libImaging/Jpeg2KEncode.o build/temp.linux-x86_64-2.7/libImaging/BoxBlur.o -L/home/ubuntu/env/lib -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-2.7/PIL/_imaging.so
+    building 'PIL._imagingmath' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c _imagingmath.c -o build/temp.linux-x86_64-2.7/_imagingmath.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/_imagingmath.o -L/home/ubuntu/env/lib -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-2.7/PIL/_imagingmath.so
+    building 'PIL._imagingmorph' extension
+    x86_64-linux-gnu-gcc -pthread -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fPIC -I/tmp/pip-build-f_0Do4/pillow/libImaging -I/usr/local/include -I/usr/include -I/usr/include/python2.7 -c _imagingmorph.c -o build/temp.linux-x86_64-2.7/_imagingmorph.o
+    x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/_imagingmorph.o -L/home/ubuntu/env/lib -L/usr/lib/x86_64-linux-gnu -L/usr/local/lib -o build/lib.linux-x86_64-2.7/PIL/_imagingmorph.so
+    --------------------------------------------------------------------
+    PIL SETUP SUMMARY
+    --------------------------------------------------------------------
+    version      Pillow 2.8.1
+    platform     linux2 2.7.6 (default, Mar 22 2014, 22:59:56)
+                 [GCC 4.8.2]
+    --------------------------------------------------------------------
+    *** TKINTER support not available
+    *** JPEG support not available
+    *** OPENJPEG (JPEG2000) support not available
+    *** ZLIB (PNG/ZIP) support not available
+    *** LIBTIFF support not available
+    *** FREETYPE2 support not available
+    *** LITTLECMS2 support not available
+    *** WEBP support not available
+    *** WEBPMUX support not available
+    --------------------------------------------------------------------
+    To add a missing option, make sure you have the required
+    library, and set the corresponding ROOT variable in the
+    setup.py script.
+    To check the build, run the selftest.py script.
+    changing mode of build/scripts-2.7/pilconvert.py from 664 to 775
+    changing mode of build/scripts-2.7/pilfont.py from 664 to 775
+    changing mode of build/scripts-2.7/pilprint.py from 664 to 775
+    changing mode of build/scripts-2.7/pildriver.py from 664 to 775
+    changing mode of build/scripts-2.7/pilfile.py from 664 to 775
+    changing mode of /home/ubuntu/env/bin/pilconvert.py to 775
+    changing mode of /home/ubuntu/env/bin/pilfont.py to 775
+    changing mode of /home/ubuntu/env/bin/pilprint.py to 775
+    changing mode of /home/ubuntu/env/bin/pildriver.py to 775
+    changing mode of /home/ubuntu/env/bin/pilfile.py to 775
+Successfully installed pillow-2.8.1
+You are using pip version 6.0.8, however version 6.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Collecting pip from https://pypi.python.org/packages/py2.py3/p/pip/pip-6.1.1-py2.py3-none-any.whl#md5=172eb5abab25a5e0f7a7b63c7a49378d
+  Downloading pip-6.1.1-py2.py3-none-any.whl (1.1MB)
+Installing collected packages: pip
+  Found existing installation: pip 6.0.8
+    Uninstalling pip-6.0.8:
+      Successfully uninstalled pip-6.0.8
+
+Successfully installed pip-6.1.1
+Cannot uninstall requirement PIL, not installed
+Uninstalling Pillow-2.8.1:
+  /home/ubuntu/env/bin/pilconvert.py
+  /home/ubuntu/env/bin/pildriver.py
+  /home/ubuntu/env/bin/pilfile.py
+  /home/ubuntu/env/bin/pilfont.py
+  /home/ubuntu/env/bin/pilprint.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BdfFontFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BdfFontFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BmpImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BmpImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BufrStubImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/BufrStubImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ContainerIO.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ContainerIO.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/CurImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/CurImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/DcxImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/DcxImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/EpsImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/EpsImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ExifTags.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ExifTags.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FitsStubImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FitsStubImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FliImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FliImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FontFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FontFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FpxImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/FpxImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GbrImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GbrImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GdImageFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GdImageFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GifImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GifImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GimpGradientFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GimpGradientFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GimpPaletteFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GimpPaletteFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GribStubImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/GribStubImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Hdf5StubImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Hdf5StubImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IcnsImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IcnsImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IcoImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IcoImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Image.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Image.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageChops.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageChops.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageCms.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageCms.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageColor.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageColor.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageDraw.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageDraw.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageDraw2.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageDraw2.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageEnhance.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageEnhance.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFileIO.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFileIO.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFilter.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFilter.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFont.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageFont.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageGrab.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageGrab.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMath.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMath.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMode.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMode.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMorph.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageMorph.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageOps.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageOps.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImagePalette.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImagePalette.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImagePath.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImagePath.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageQt.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageQt.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageSequence.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageSequence.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageShow.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageShow.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageStat.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageStat.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageTk.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageTk.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageTransform.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageTransform.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageWin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImageWin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImtImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/ImtImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IptcImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/IptcImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Jpeg2KImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/Jpeg2KImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/JpegImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/JpegImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/JpegPresets.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/JpegPresets.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/McIdasImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/McIdasImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MicImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MicImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MpegImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MpegImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MpoImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MpoImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MspImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/MspImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/OleFileIO-README.md
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/OleFileIO.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/OleFileIO.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PSDraw.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PSDraw.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PaletteFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PaletteFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PalmImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PalmImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcdImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcdImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcfFontFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcfFontFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcxImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PcxImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PdfImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PdfImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PixarImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PixarImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PngImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PngImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PpmImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PpmImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PsdImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PsdImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PyAccess.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/PyAccess.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SgiImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SgiImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SpiderImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SpiderImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SunImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/SunImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TarIO.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TarIO.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TgaImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TgaImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TiffImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TiffImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TiffTags.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/TiffTags.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WalImageFile.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WalImageFile.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WebPImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WebPImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WmfImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/WmfImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XVThumbImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XVThumbImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XbmImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XbmImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XpmImagePlugin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/XpmImagePlugin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_binary.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_binary.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_imaging.so
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_imagingmath.so
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_imagingmorph.so
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_util.py
+  /home/ubuntu/env/lib/python2.7/site-packages/PIL/_util.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/Pillow-2.8.1-py2.7.egg-info
+  Successfully uninstalled Pillow-2.8.1
+Collecting pillow
+  Using cached Pillow-2.8.1.tar.gz
+Installing collected packages: pillow
+  Running setup.py install for pillow
+Successfully installed pillow-2.8.1
+Collecting djangocms-slideshow
+  Downloading djangocms-slideshow-0.1.5.tar.gz
+Collecting django-admin-sortable==1.6.7 (from djangocms-slideshow)
+  Downloading django-admin-sortable-1.6.7.tar.gz (77kB)
+Collecting django-sekizai==0.7 (from djangocms-slideshow)
+  Downloading django-sekizai-0.7.tar.gz (108kB)
+Collecting easy-thumbnails==2.0.1 (from djangocms-slideshow)
+  Downloading easy-thumbnails-2.0.1.tar.gz (69kB)
+Collecting django-classy-tags>=0.3.1 (from django-sekizai==0.7->djangocms-slideshow)
+  Downloading django_classy_tags-0.6.1-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): django>=1.4.2 in /home/ubuntu/env/lib/python2.7/site-packages (from easy-thumbnails==2.0.1->djangocms-slideshow)
+Requirement already satisfied (use --upgrade to upgrade): pillow in /home/ubuntu/env/lib/python2.7/site-packages (from easy-thumbnails==2.0.1->djangocms-slideshow)
+Installing collected packages: django-admin-sortable, django-classy-tags, django-sekizai, easy-thumbnails, djangocms-slideshow
+  Running setup.py install for django-admin-sortable
+  Running setup.py install for django-sekizai
+  Running setup.py install for easy-thumbnails
+  Running setup.py install for djangocms-slideshow
+Successfully installed django-admin-sortable-1.6.7 django-classy-tags-0.6.1 django-sekizai-0.7 djangocms-slideshow-0.1.5 easy-thumbnails-2.0.1
+Collecting pluginmodel
+  Could not find a version that satisfies the requirement pluginmodel (from versions: )
+  No matching distribution found for pluginmodel
+You are using pip version 6.0.8, however version 6.1.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Uninstalling djangocms-slideshow-0.1.5:
+  /usr/local/lib/python2.7/dist-packages/djangocms_slideshow-0.1.5.egg-info
+  /usr/local/lib/python2.7/dist-packages/slideshow/__init__.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/__init__.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/admin.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/admin.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/cms_plugins.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/cms_plugins.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/locale/en/LC_MESSAGES/django.mo
+  /usr/local/lib/python2.7/dist-packages/slideshow/locale/en/LC_MESSAGES/django.po
+  /usr/local/lib/python2.7/dist-packages/slideshow/locale/nl/LC_MESSAGES/django.mo
+  /usr/local/lib/python2.7/dist-packages/slideshow/locale/nl/LC_MESSAGES/django.po
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/0001_initial.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/0001_initial.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/0002_auto__add_field_image_url__chg_field_image_name.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/0002_auto__add_field_image_url__chg_field_image_name.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/__init__.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/migrations/__init__.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/models.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/models.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/templates/slideshow/slideshow.html
+  /usr/local/lib/python2.7/dist-packages/slideshow/tests.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/tests.pyc
+  /usr/local/lib/python2.7/dist-packages/slideshow/widgets.py
+  /usr/local/lib/python2.7/dist-packages/slideshow/widgets.pyc
+Uninstalling djangocms-slideshow-0.1.5:
+  /home/ubuntu/env/lib/python2.7/site-packages/djangocms_slideshow-0.1.5-py2.7.egg-info
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/admin.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/admin.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/cms_plugins.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/cms_plugins.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/locale/en/LC_MESSAGES/django.mo
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/locale/en/LC_MESSAGES/django.po
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/locale/nl/LC_MESSAGES/django.mo
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/locale/nl/LC_MESSAGES/django.po
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/0001_initial.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/0001_initial.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/0002_auto__add_field_image_url__chg_field_image_name.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/0002_auto__add_field_image_url__chg_field_image_name.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/__init__.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/migrations/__init__.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/models.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/models.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/templates/slideshow/slideshow.html
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/tests.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/tests.pyc
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/widgets.py
+  /home/ubuntu/env/lib/python2.7/site-packages/slideshow/widgets.pyc
+  Successfully uninstalled djangocms-slideshow-0.1.5

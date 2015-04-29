@@ -1,0 +1,32 @@
+{% include "myapp/header.html" %}
+        <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='tab5' %}
+        </div>
+        <div id="main" class="container">
+            <div class="outlined_normal" id="article">
+                <h3>Contact Us</h3>
+                <div class="row">
+                    <a href="mailto:rob@rthockeybc.com">
+                        <abbr title="Email">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                                rob@rthockeybc.com
+                         </abbr>
+                    </a>
+                </div>
+                <div class="row">
+                    <abbr title="Phone">
+                        <i class="glyphicon glyphicon-earphone"></i>
+                        778.908.4039
+                    </abbr>
+                </div>
+                <div class="row">
+                    <a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.rthockeybc.com%252F%2523.VO1R-69AGCQ.facebook%26ret%3Dlogin&display=popup" target="_blank">
+                        <abbr title="Facebook">
+                            <i class="fa fa-facebook-official"></i>
+                            &nbsp;RT Hockey
+                        </abbr>
+                    </a>
+                </div>
+            </div> <!-- /article -->
+        </div> <!-- /main -->
+{% include "myapp/footer.html" %}

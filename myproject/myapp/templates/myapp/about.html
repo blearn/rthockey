@@ -1,0 +1,13 @@
+{% include "myapp/header.html" %}
+        <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='tab4' %}
+        </div>
+        <div id="main" class="container">
+            <div class="outlined_normal" id="article">
+                <h2>About</h2>
+                <p>Robert Thompson is the owner and head trainer for RT Hockey.</p>
+                <img src="/static/myapp/rob.png" alt="Rob">
+                </ul>
+            </div>
+        </div> <!-- /main -->
+{% include "myapp/footer.html" %}

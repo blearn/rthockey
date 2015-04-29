@@ -1,11 +1,17 @@
 {% include "myapp/header.html" %}
+        <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='tab2' %}
+        </div>
     <div id="main" class="container">
         <div class="outlined_normal" id="article">
         <h2>{{ program.title }}</h2>
         <p>{{ program.description }}</p>
-        <p>Cost: ${{ program.cost }}.00 (tax incl)</p>
+        <input type="hidden" name="regtype" value="program{{program.id}}"/>
+        <p>Cost: ${{ program.cost }}.00 (tax incl) <a href="{% url 'myapp:register_program' program.id %}">Register for this program</a></p>
         {% if program_sessions_list %}
-            This program has {{ program_sessions_list|length }} session{% if program_sessions_list|length > 1 %}s{% endif %}:
+            <br/><br/><br/>
+            <h2>Drop-In</h2>
+            <p>This program has {{ program_sessions_list|length }} session{% if program_sessions_list|length > 1 %}s{% endif %} available for drop-in:</p>
             <ul>
             {% for session in program_sessions_list %}
                 <li>
@@ -13,8 +19,6 @@
                 </li>
             {% endfor %}
             </ul>
-        {% else %}
-            <p>No sessions are available.</p>
         {% endif %}
         </div> <!-- article -->
     </div> <!-- main -->

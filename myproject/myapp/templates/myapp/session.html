@@ -1,10 +1,13 @@
 {% include "myapp/header.html" %}
+        <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='tab2' %}
+        </div>
     <div id="main" class="container">
         <div class="outlined_normal" id="article">
         <h2>{{ session.title }}</h2>
         <p>{{ session.description }}</p>
         <p>{{ session.start_date }} at {{ session.location.name }}</p>
-        <p>Drop-in cost: ${{ session.cost }}.00 (tax incl)</p>
+        <p>Drop-in cost: ${{ session.cost }}.00 (tax incl) <a href="{% url 'myapp:register_session' session.id %}">Register for this session</a></p>
         </div> <!-- /article -->
     </div> <!-- /main -->
 {% include "myapp/footer.html" %}

@@ -8,7 +8,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/width
+~MSle0~/image_list
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
 :wq
@@ -20,6 +23,14 @@
 :set nu
 
 # Search String History (newest to oldest):
+?/image_list
+?/img_list
+?/group
+?/MEDIA
+?/row
+?/page
+? ;
+?/contain
 ?/width
 ?/container
 ?/STATIC_ROOT
@@ -31,268 +42,495 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	-1px -1px 0 #000,
-	1px -1px 0 #000,
-	-1px 1px 0 #000,
-	1px 1px 0 #000;
-""1	LINE	0
-	padding-top:244px;
+""0	LINE	0
+	    <li data-target="#myCarousel" data-slide-to="3"></li>
+"1	LINE	0
+	        </div> <!-- /main -->
+	{% include "myapp/footer.html" %}
 "2	LINE	0
-	z-index:2;
+	            <div class="outlined_normal" id="article">
+	                <h2>About</h2>
+	                <p>Robert Thompson is the owner and head trainer for RT Hockey.</p>
+	                <img src="/static/myapp/rob.png" alt="Rob">
+	                </ul>
+	            </div>
 "3	LINE	0
-	width:100%;
+	      <img src="img_flower.jpg" alt="Flower">
 "4	LINE	0
-	-1px -1px 0 #fff,
-	1px -1px 0 #fff,
-	-1px 1px 0 #fff,
-	1px 1px 0 #fff;
+	
+	<div id="slides">
+	    <div class="slides_container">
+	        {% for image in images %}
+	        <!-- SLIDE -->
+	        <div class="slide">
+	            <img border="0" alt="" src="/static/myapp/{{image}}"
+	                {% if img.height > 540 %} height="540" {% endif %}>
+	        </div>
+	        {% endfor %}
+	    </div>
+	    <a href="#" class="prev"><img src="/static/myapp/previousbutton.jpg" width="24" height="24" alt="Arrow Prev"></a>
+	    <a href="#" class="next"><img src="/static/myapp/nextbutton.jpg" width="24" height="24" alt="Arrow Next"></a>
+	</div>
 "5	LINE	0
-	    <div id="main">
+	from tempfile import NamedTemporaryFile
+	from PIL import Image as PImage
+	from os.path import join as pjoin, basename
+	from django.core.files import File
 "6	LINE	0
-	    <div id="main">
+	class BasicModel(models.Model):
+	    class Meta: abstract = True
+	    obj = objects = models.Manager()
+	
+	    def update(self, **kwargs):
+	        for k, v in kwargs.items():
+	            setattr(self, k, v)
+	        self.save()
+	
+	BaseModel = BasicModel
 "7	LINE	0
-	    <div id="main">
+	    image       = models.ImageField(upload_to="images/")
+	    thumbnail1  = models.ImageField(upload_to="images/", blank=True, null=True)
+	    thumbnail2  = models.ImageField(upload_to="images/", blank=True, null=True)
+	
+	    width       = models.IntegerField(blank=True, null=True)
+	    height      = models.IntegerField(blank=True, null=True)
+	    hidden      = models.BooleanField(default=False)
+	    #group       = models.ForeignKey(Group, related_name="images", blank=True)
+	    created     = models.DateTimeField(auto_now_add=True)
+	
+	    class Meta:
+	        ordering = ["created"]
 "8	LINE	0
-	background-repeat: no-repeat;
+	
+	    def get_absolute_url(self):
+	        return reverse2("image", mfpk=self.pk)
+	
+	    def save(self, *args, **kwargs):
+	        """Save image dimensions."""
+	        super(Image, self).save(*args, **kwargs)
+	        img = PImage.open(pjoin(settings.MEDIA_ROOT, self.image.name))
+	        self.width, self.height = img.size
+	        self.save_thumbnail(img, 1, (128,128))
+	        self.save_thumbnail(img, 2, (64,64))
+	        super(Image, self).save(*args, **kwargs)
+	
+	    def save_thumbnail(self, img, num, size):
+	        fn, ext = os.path.splitext(self.image.name)
+	        img.thumbnail(size, PImage.ANTIALIAS)
+	        thumb_fn = fn + "-thumb" + str(num) + ext
+	        tf = NamedTemporaryFile()
+	        img.save(tf.name, "JPEG")
+	        thumbnail = getattr(self, "thumbnail%s" % num)
+	        thumbnail.save(thumb_fn, File(open(tf.name)), save=False)
+	        tf.close()
+	
+	    def size(self):
+	        return "%s x %s" % (self.width, self.height)
+	
+	    def thumbnail1_url(self) : return settings.MEDIA_URL + self.thumbnail1.name
+	    def thumbnail2_url(self) : return settings.MEDIA_URL + self.thumbnail2.name
+	    def image_url(self)      : return settings.MEDIA_URL + self.image.name
 "9	LINE	0
-	!width: 100%;
+	    'slideshow',
 "-	CHAR	0
 	e
 
 # File marks:
-'0  24  35  ~/myproject/myapp/templates/myapp/footer.html
-'1  12  145  ~/myproject/myapp/templates/myapp/program.html
-'2  6  39  ~/myproject/myapp/templates/myapp/session.html
-'3  6  0  ~/myproject/myapp/templates/myapp/index.html
-'4  144  0  ~/myproject/myapp/static/myapp/style.css
-'5  30  2  ~/myproject/myapp/static/myapp/position.css
-'6  152  0  ~/myproject/myapp/static/myapp/style.css
-'7  1  0  ~/myproject/myapp/templates/myapp/index.html
-'8  134  19  ~/myproject/myapp/static/myapp/style.css
-'9  130  8  ~/myproject/myapp/static/myapp/style.css
+'0  3  60  ~/myproject/myapp/templates/myapp/gallery.html
+'1  29  0  ~/myproject/myapp/templates/myapp/slideshow.html
+'2  7  3  ~/myproject/myapp/templates/myapp/gallery.html
+'3  6  51  ~/myproject/myapp/templates/myapp/contact.html
+'4  6  0  ~/myproject/myapp/templates/myapp/gallery.html
+'5  8  28  ~/myproject/myapp/templates/myapp/contact.html
+'6  1  0  ~/myproject/myapp/templates/myapp/about.html
+'7  1  0  ~/myproject/myapp/templates/myapp/contact.html
+'8  9  0  ~/myproject/myapp/templates/myapp/old_footer.html
+'9  8  78  ~/myproject/myapp/templates/myapp/about.html
 
 # Jumplist (newest first):
--'  24  35  ~/myproject/myapp/templates/myapp/footer.html
--'  1  8  ~/myproject/myapp/templates/myapp/footer.html
--'  12  145  ~/myproject/myapp/templates/myapp/program.html
--'  1  0  ~/myproject/myapp/templates/myapp/program.html
--'  6  39  ~/myproject/myapp/templates/myapp/session.html
--'  1  0  ~/myproject/myapp/templates/myapp/session.html
--'  6  0  ~/myproject/myapp/templates/myapp/index.html
+-'  3  60  ~/myproject/myapp/templates/myapp/gallery.html
+-'  1  0  ~/myproject/myapp/templates/myapp/gallery.html
+-'  29  0  ~/myproject/myapp/templates/myapp/slideshow.html
+-'  1  0  ~/myproject/myapp/templates/myapp/slideshow.html
+-'  7  3  ~/myproject/myapp/templates/myapp/gallery.html
+-'  6  51  ~/myproject/myapp/templates/myapp/contact.html
+-'  1  0  ~/myproject/myapp/templates/myapp/contact.html
+-'  6  0  ~/myproject/myapp/templates/myapp/gallery.html
+-'  8  28  ~/myproject/myapp/templates/myapp/contact.html
+-'  1  0  ~/myproject/myapp/templates/myapp/about.html
+-'  9  0  ~/myproject/myapp/templates/myapp/old_footer.html
+-'  1  8  ~/myproject/myapp/templates/myapp/old_footer.html
+-'  8  78  ~/myproject/myapp/templates/myapp/about.html
 -'  1  0  ~/myproject/myapp/templates/myapp/index.html
--'  144  0  ~/myproject/myapp/static/myapp/style.css
--'  1  0  ~/myproject/myapp/static/myapp/style.css
--'  30  2  ~/myproject/myapp/static/myapp/position.css
--'  1  0  ~/myproject/myapp/static/myapp/position.css
--'  152  0  ~/myproject/myapp/static/myapp/style.css
--'  156  0  ~/myproject/myapp/static/myapp/style.css
--'  142  0  ~/myproject/myapp/static/myapp/style.css
--'  130  0  ~/myproject/myapp/static/myapp/style.css
--'  127  0  ~/myproject/myapp/static/myapp/style.css
--'  82  4  ~/myproject/myapp/static/myapp/style.css
--'  72  18  ~/myproject/myapp/static/myapp/style.css
--'  134  19  ~/myproject/myapp/static/myapp/style.css
--'  149  16  ~/myproject/myapp/static/myapp/style.css
--'  139  15  ~/myproject/myapp/static/myapp/style.css
--'  2  22  ~/myproject/myapp/static/myapp/style.css
--'  2  35  ~/myproject/myapp/templates/myapp/session.html
--'  3  4  ~/myproject/myapp/templates/myapp/session.html
--'  3  3  ~/myproject/myapp/templates/myapp/program.html
--'  2  0  ~/myproject/myapp/templates/myapp/index.html
--'  26  18  ~/myproject/myapp/templates/myapp/header.html
--'  1  0  ~/myproject/myapp/templates/myapp/header.html
--'  10  16  ~/myproject/myapp/static/myapp/style.css
--'  119  6  ~/myproject/myapp/static/myapp/style.css
--'  151  5  ~/myproject/myapp/static/myapp/style.css
--'  120  6  ~/myproject/myapp/static/myapp/style.css
--'  126  6  ~/myproject/myapp/static/myapp/style.css
--'  28  11  ~/myproject/myapp/templates/myapp/header.html
--'  26  51  ~/myproject/myapp/templates/myapp/footer.html
--'  158  0  ~/myproject/myapp/static/myapp/style.css
--'  45  12  ~/myproject/myapp/static/myapp/style.css
--'  124  11  ~/myproject/myapp/static/myapp/style.css
--'  2  81  ~/myproject/myapp/templates/includes/tabs.html
--'  1  0  ~/myproject/myapp/templates/includes/tabs.html
--'  3  79  ~/myproject/myapp/templates/includes/tabs.html
--'  27  0  ~/myproject/myapp/templates/myapp/header.html
--'  15  94  ~/myproject/myapp/templates/myapp/header.html
--'  153  0  ~/myproject/myapp/static/myapp/style.css
--'  4  0  ~/myproject/myapp/static/myapp/position.css
--'  133  0  ~/myproject/myapp/static/myapp/style.css
--'  69  0  ~/myproject/myapp/static/myapp/style.css
--'  23  0  ~/myproject/myapp/templates/myapp/header.html
--'  1  0  ~/readme
--'  15  0  ~/readme
--'  14  23  ~/myproject/myapp/admin.py
+-'  30  23  ~/myproject/myapp/templates/myapp/slideshow.html
+-'  17  20  ~/myproject/myapp/templates/myapp/index.html
+-'  44  31  ~/myproject/myapp/admin.py
 -'  1  0  ~/myproject/myapp/admin.py
--'  13  48  ~/myproject/myapp/admin.py
--'  40  0  ~/myproject/myapp/admin.py
--'  10  0  ~/myproject/myapp/admin.py
--'  16  17  ~/myproject/myapp/admin.py
--'  7  21  ~/myproject/myapp/admin.py
--'  15  88  ~/myproject/myapp/views.py
--'  1  0  ~/myproject/myapp/views.py
+-'  64  8  ~/myproject/myapp/models.py
 -'  1  0  ~/myproject/myapp/models.py
--'  7  7  ~/myproject/myapp/templates/myapp/program.html
--'  8  115  ~/myproject/myapp/templates/myapp/program.html
--'  20  23  ~/myproject/myapp/templates/myapp/program.html
--'  3  0  ~/myproject/myapp/templates/myapp/index.html
--'  10  17  ~/myproject/myapp/templates/myapp/program.html
--'  11  14  ~/myproject/myapp/templates/myapp/program.html
--'  9  7  ~/myproject/myapp/templates/myapp/program.html
--'  1  0  ~/myproject/myapp/urls.py
--'  26  17  ~/myproject/myapp/templates/myapp/index.html
--'  33  31  ~/myproject/myapp/templates/myapp/header.html
--'  25  8  ~/myproject/myapp/templates/myapp/index.html
--'  9  19  ~/myproject/myapp/urls.py
--'  8  18  ~/myproject/myapp/urls.py
--'  5  0  ~/myproject/myapp/templates/myapp/index.html
--'  14  4  ~/myproject/myapp/templates/myapp/program.html
--'  17  37  ~/myproject/myapp/views.py
--'  27  59  ~/myproject/myapp/views.py
--'  16  84  ~/myproject/myapp/views.py
--'  1  0  ~/myproject/myproject/templates/admin/base_site.html
--'  1  0  ~/myproject/myproject/urls.py
--'  14  0  ~/myproject/myapp/views.py
--'  10  0  ~/myproject/myapp/urls.py
--'  15  0  ~/myproject/myapp/templates/myapp/program.html
--'  20  0  ~/myproject/myapp/views.py
--'  49  4  ~/myproject/myapp/models.py
--'  7  0  ~/myproject/myapp/views.py
--'  55  0  ~/myproject/myapp/models.py
--'  6  0  ~/myproject/myapp/templates/myapp/program.html
--'  18  31  ~/myproject/myapp/views.py
--'  23  0  ~/myproject/myapp/views.py
--'  17  36  ~/myproject/myapp/templates/myapp/program.html
--'  31  12  ~/myproject/myproject/settings.py
+-'  15  0  ~/readme
+-'  1  0  ~/readme
+-'  43  0  ~/myproject/myproject/settings.py
 -'  1  0  ~/myproject/myproject/settings.py
--'  8  36  ~/myproject/myapp/admin.py
--'  11  0  ~/myproject/myapp/models.py
--'  144  0  ~/myproject/myapp/static/myapp/style.css
+-'  63  0  ~/myproject/myproject/settings.py
+-'  7  0  ~/myproject/myapp/views.py
+-'  1  0  ~/myproject/myapp/views.py
+-'  95  4  ~/myproject/myapp/models.py
+-'  1  0  ~/myproject/manage.py
+-'  19  54  ~/myproject/myapp/views.py
+-'  88  0  ~/myproject/myproject/settings.py
+-'  7  31  ~/myproject/myapp/models.py
+-'  100  46  ~/myproject/myapp/models.py
+-'  43  0  ~/myproject/myapp/admin.py
+-'  20  0  ~/myproject/myapp/urls.py
+-'  1  0  ~/myproject/myapp/urls.py
+-'  94  8  ~/myproject/myapp/models.py
+-'  64  4  ~/myproject/myproject/settings.py
+-'  21  4  ~/myproject/myapp/urls.py
+-'  62  0  ~/myproject/myapp/models.py
+-'  53  7  ~/myproject/myapp/models.py
+-'  97  5  ~/myproject/myapp/models.py
+-'  4  41  ~/myproject/myapp/urls.py
+-'  89  43  ~/myproject/myproject/settings.py
+-'  101  0  ~/myproject/myapp/models.py
+-'  147  0  ~/myproject/myapp/static/myapp/style.css
 -'  1  0  ~/myproject/myapp/static/myapp/style.css
+-'  17  47  ~/myproject/myapp/templates/myapp/register_program.html
+-'  1  0  ~/myproject/myapp/templates/myapp/register_program.html
+-'  6  24  ~/myproject/myapp/forms.py
+-'  1  0  ~/myproject/myapp/forms.py
+-'  4  0  ~/myproject/myapp/old_forms.py
+-'  1  0  ~/myproject/myapp/old_forms.py
+-'  10  43  ~/myproject/myapp/forms.py
+-'  16  0  ~/myproject/myapp/old_forms.py
+-'  71  51  ~/myproject/myapp/models.py
+-'  18  17  ~/myproject/myapp/urls.py
+-'  2  28  ~/myproject/myapp/templates/myapp/player.html
+-'  1  0  ~/myproject/myapp/templates/myapp/player.html
+-'  16  39  ~/myproject/myapp/templates/myapp/register_program.html
+-'  30  0  ~/myproject/myapp/views.py
+-'  96  71  ~/myproject/myapp/views.py
+-'  86  0  ~/myproject/myapp/views.py
+-'  72  4  ~/myproject/myapp/static/myapp/style.css
+-'  86  76  ~/myproject/myapp/models.py
+-'  1  0  ~/myproject/models.py
+-'  47  4  ~/myproject/myapp/models.py
+-'  41  30  ~/myproject/myapp/admin.py
+-'  102  0  ~/myproject/myapp/models.py
+-'  4  2  ~/myproject/myapp/templates/myapp/player.html
+-'  97  0  ~/myproject/myapp/views.py
+-'  6  0  ~/myproject/myapp/views.py
+-'  3  4  ~/myproject/myapp/templates/myapp/player.html
+-'  53  0  ~/myproject/myapp/views.py
+-'  100  68  ~/myproject/myapp/views.py
+-'  8  0  ~/myproject/myapp/forms.py
+-'  91  0  ~/myproject/myapp/views.py
+-'  84  14  ~/myproject/myapp/views.py
+-'  18  31  ~/myproject/myapp/templates/myapp/register_program.html
+-'  1  0  ~/myproject/myapp/templates/myapp/register.html
+-'  1  0  ~/myproject/myapp/templates/myapp/register_session.html
+-'  48  4  ~/myproject/myapp/views.py
+-'  73  0  ~/myproject/myapp/views.py
+-'  82  57  ~/myproject/myapp/views.py
+-'  7  0  ~/myproject/myapp/forms.py
+-'  6  88  ~/myproject/myapp/templates/includes/tabs.html
+-'  1  0  ~/myproject/myapp/templates/includes/tabs.html
+-'  77  18  ~/myproject/myapp/views.py
+-'  17  50  ~/myproject/myapp/urls.py
+-'  137  11  ~/myproject/myapp/static/myapp/style.css
+-'  7  0  ~/myproject/myapp/templates/includes/tabs.html
+-'  2  44  ~/myproject/myapp/templates/myapp/footer.html
+-'  1  8  ~/myproject/myapp/templates/myapp/footer.html
+-'  148  0  ~/myproject/myapp/static/myapp/style.css
+-'  3  0  ~/myproject/myapp/templates/myapp/footer.html
+-'  5  102  ~/myproject/myapp/templates/includes/tabs.html
+-'  41  0  ~/myproject/myapp/static/myapp/style.css
+-'  1  0  static/myapp/style.css
 
 # History of marks within files (newest to oldest):
 
-> ~/myproject/myapp/templates/myapp/footer.html
-	"	24	35
-	^	26	61
-	.	26	60
+> ~/myproject/myapp/templates/myapp/gallery.html
+	"	3	60
+	^	3	61
+	.	3	60
 	+	1	0
 	+	1	0
-	+	26	60
-
-> ~/myproject/myapp/templates/myapp/program.html
-	"	12	145
-	^	12	146
-	.	12	145
-	+	1	19
-	+	6	6
-	+	5	27
-	+	6	20
-	+	1	12
-	+	5	15
-	+	6	46
 	+	1	0
-	+	1	31
-	+	22	0
-	+	18	10
-	+	11	79
-	+	15	8
-	+	14	15
-	+	17	36
-	+	1	0
-	+	5	0
-	+	10	37
-	+	7	21
-	+	10	15
-	+	11	12
-	+	13	12
-	+	14	83
-	+	12	30
-	+	10	17
-	+	12	34
-	+	14	0
-	+	12	34
-	+	7	94
-	+	12	91
+	+	8	0
+	+	9	0
+	+	8	11
+	+	8	19
+	+	7	26
 	+	8	3
-	+	8	53
-	+	5	0
+	+	3	60
+
+> ~/myproject/myapp/templates/myapp/slideshow.html
+	"	29	0
+	^	29	0
+	.	30	0
+	+	1	4
+	+	1	5
+	+	1	15
+	+	1	16
 	+	1	0
 	+	1	0
-	+	3	0
-	+	18	11
-	+	21	0
-	+	22	0
-	+	12	71
-	+	10	13
-	+	11	14
+	+	1	0
+	+	1	0
+	+	1	17
+	+	1	33
+	+	1	3
+	+	1	7
+	+	1	11
+	+	1	15
+	+	1	3
+	+	1	7
+	+	1	3
+	+	1	7
+	+	1	11
+	+	1	15
+	+	1	3
+	+	1	7
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	13
+	+	1	0
+	+	1	3
+	+	1	7
+	+	1	3
+	+	1	93
+	+	1	57
+	+	1	1
+	+	1	15
+	+	1	27
+	+	1	0
+	+	1	0
+	+	1	4
+	+	1	4
+	+	1	4
+	+	1	4
+	+	1	4
+	+	1	5
+	+	1	0
+	+	1	0
+	+	1	55
+	+	1	30
+	+	1	17
+	+	1	46
+	+	1	46
+	+	1	0
+	+	1	48
+	+	1	87
+	+	1	59
+	+	1	52
+	+	1	53
+	+	1	65
+	+	64	5
+	+	21	43
+	+	24	31
+	+	27	43
+	+	30	31
+	+	21	22
+	+	24	11
+	+	27	25
+	+	30	24
+	+	32	0
+	+	35	0
+	+	38	0
+	+	41	0
+	+	44	0
+	+	33	57
+	+	36	45
+	+	39	57
+	+	42	45
+	+	45	57
+	+	47	0
+	+	50	0
+	+	48	45
+	+	51	58
+	+	8	0
+	+	9	0
 	+	10	0
 	+	11	0
-	+	12	85
-	+	3	0
-	+	3	0
-	+	3	7
-	+	19	5
-	+	1	51
-	+	19	31
-	+	20	23
-	+	8	116
-	+	18	7
-	+	17	7
-	+	16	7
-	+	15	7
-	+	14	3
-	+	13	11
-	+	12	19
-	+	11	7
-	+	10	7
-	+	14	11
-	+	9	7
-	+	7	7
-	+	8	7
-	+	6	7
-	+	5	7
-	+	4	7
-	+	1	33
-	+	2	3
-	+	4	12
-	+	5	11
-	+	12	150
-	+	8	64
-	+	12	145
+	+	12	0
+	+	13	0
+	+	14	0
+	+	15	50
+	+	14	50
+	+	13	49
+	+	12	49
+	+	11	49
+	+	10	49
+	+	9	49
+	+	8	49
+	+	24	0
+	+	27	0
+	+	30	0
 
-> ~/myproject/myapp/templates/myapp/session.html
-	"	6	39
-	^	6	59
-	.	6	58
-	+	1	12
+> ~/myproject/myapp/templates/myapp/contact.html
+	"	6	51
+	^	6	52
+	.	6	52
+	+	8	0
 	+	1	0
-	+	2	50
-	+	4	0
-	+	4	21
-	+	9	23
-	+	8	20
-	+	9	25
-	+	10	32
-	+	4	30
-	+	7	59
-	+	6	36
-	+	4	27
-	+	6	32
-	+	7	41
-	+	5	39
-	+	6	66
 	+	2	0
+	+	8	0
+	+	31	0
+	+	7	30
+	+	6	0
+	+	7	3
+	+	8	7
+	+	9	11
+	+	10	15
+	+	11	19
+	+	12	23
+	+	13	3
+	+	14	7
+	+	15	11
+	+	16	3
+	+	17	7
+	+	18	11
+	+	19	15
+	+	20	19
+	+	21	3
+	+	22	7
+	+	23	11
+	+	24	15
+	+	25	19
+	+	26	23
+	+	27	3
+	+	28	7
+	+	29	0
+	+	31	4
+	+	30	35
+	+	3	60
+	+	6	52
+
+> ~/myproject/myapp/static/myapp/style.css
+	"	38	14
+	^	38	15
+	.	38	15
+	+	109	0
+	+	109	0
+	+	109	0
+	+	109	0
+	+	108	0
+	+	109	0
+	+	108	3
+	+	109	3
+	+	152	0
+	+	151	0
+	+	143	21
+	+	144	22
+	+	28	0
+	+	145	3
+	+	146	3
+	+	147	3
+	+	148	3
+	+	149	3
+	+	150	3
+	+	144	18
+	+	139	12
+	+	141	0
+	+	140	0
+	+	139	12
+	+	121	3
+	+	121	3
+	+	118	3
+	+	117	3
+	+	116	3
+	+	115	3
+	+	114	3
+	+	113	3
+	+	121	3
+	+	118	4
+	+	119	3
+	+	118	26
+	+	121	0
+	+	12	16
+	+	13	11
+	+	61	9
+	+	62	11
+	+	115	9
+	+	116	11
+	+	140	9
+	+	141	11
 	+	3	0
-	+	2	35
-	+	6	58
+	+	57	0
+	+	117	19
+	+	57	5
+	+	57	33
+	+	57	4
+	+	121	0
+	+	57	33
+	+	57	0
+	+	57	0
+	+	120	0
+	+	117	16
+	+	57	5
+	+	57	34
+	+	57	4
+	+	57	4
+	+	122	0
+	+	13	0
+	+	108	5
+	+	109	14
+	+	108	4
+	+	132	22
+	+	134	0
+	+	132	22
+	+	135	0
+	+	133	4
+	+	132	26
+	+	117	19
+	+	113	4
+	+	138	4
+	+	139	11
+	+	138	4
+	+	117	19
+	+	113	4
+	+	117	16
+	+	130	0
+	+	125	10
+	+	125	5
+	+	128	22
+	+	130	253
+	+	128	22
+	+	130	0
+	+	129	16
+	+	57	0
+	+	129	15
+	+	37	4
+	+	39	13
+	+	45	0
+	+	44	17
+	+	39	0
+	+	42	0
+	+	45	0
+	+	44	11
+	+	37	4
+	+	38	15
+
+> ~/myproject/myapp/templates/myapp/about.html
+	"	1	0
+	^	8	79
+	.	8	78
+	+	1	0
+	+	2	0
+	+	3	60
+	+	7	24
+	+	9	57
+	+	8	78
+
+> ~/myproject/myapp/templates/myapp/old_footer.html
+	"	9	0
 
 > ~/myproject/myapp/templates/myapp/index.html
-	"	6	0
-	^	2	23
-	.	2	22
+	"	1	0
+	^	8	127
+	.	8	127
 	+	1	7
 	+	1	19
 	+	1	35
@@ -310,7 +548,7 @@
 	+	1	0
 	+	1	9
 	+	1	0
-	+	18	0
+	+	19	0
 	+	1	21
 	+	1	82
 	+	1	25
@@ -334,7 +572,7 @@
 	+	1	56
 	+	1	31
 	+	1	0
-	+	27	0
+	+	21	0
 	+	1	56
 	+	1	0
 	+	1	0
@@ -350,121 +588,941 @@
 	+	1	17
 	+	1	20
 	+	1	17
-	+	4	147
+	+	8	147
 	+	1	37
 	+	1	0
-	+	27	0
+	+	21	0
 	+	2	7
 	+	1	26
-	+	26	26
+	+	20	26
 	+	1	17
-	+	26	17
-	+	2	22
+	+	20	17
+	+	2	0
+	+	2	0
+	+	2	0
+	+	2	0
+	+	4	0
+	+	3	7
+	+	6	59
+	+	6	17
+	+	6	0
+	+	7	24
+	+	7	20
+	+	7	44
+	+	6	0
+	+	7	27
+	+	8	18
+	+	8	193
+	+	19	0
+	+	18	0
+	+	8	127
 
-> ~/myproject/myapp/static/myapp/style.css
-	"	144	0
-	^	144	0
-	.	145	0
-	+	114	0
-	+	115	0
-	+	126	6
-	+	10	3
-	+	11	0
-	+	10	16
-	+	11	9
-	+	12	7
-	+	118	16
-	+	119	7
-	+	120	6
-	+	149	18
-	+	151	8
-	+	152	10
-	+	152	7
-	+	151	5
-	+	119	6
-	+	10	1
-	+	124	0
-	+	139	0
-	+	149	15
-	+	139	16
-	+	124	15
-	+	118	15
-	+	10	16
-	+	119	5
-	+	142	5
-	+	2	22
-	+	139	16
-	+	142	6
-	+	143	13
-	+	144	22
-	+	142	9
-	+	139	15
-	+	142	4
-	+	144	21
-	+	27	6
-	+	33	15
-	+	33	14
-	+	33	14
-	+	33	0
-	+	29	0
-	+	27	10
-	+	36	0
-	+	40	17
-	+	126	7
-	+	149	16
-	+	120	7
-	+	119	5
-	+	143	7
-	+	142	0
-	+	143	0
-	+	126	1
-	+	130	9
-	+	127	14
-	+	129	14
-	+	3	0
-	+	60	0
-	+	61	0
-	+	7	0
+> ~/myproject/myapp/admin.py
+	"	44	31
+	^	44	32
+	.	44	31
+	+	46	50
+	+	1	32
+	+	2	32
 	+	8	0
-	+	129	15
-	+	127	14
-	+	129	14
-	+	124	9
-	+	134	34
-	+	130	8
-	+	124	1
-	+	126	0
-	+	134	19
-	+	142	5
-	+	139	16
-	+	128	17
-	+	140	5
-	+	128	13
-	+	146	0
-	+	135	0
-	+	135	0
-	+	136	1
-	+	144	23
-	+	130	13
-	+	131	17
-	+	132	17
-	+	128	16
-	+	149	17
-	+	151	17
-	+	152	17
-	+	152	6
-	+	151	0
-	+	152	0
-	+	151	7
-	+	142	6
-	+	140	6
-	+	153	0
-	+	150	8
-	+	144	22
-	+	142	0
-	+	144	0
-	+	144	0
-	+	145	0
+	+	8	0
+	+	8	0
+	+	8	0
+	+	10	0
+	+	11	4
+	+	12	4
+	+	46	0
+	+	10	0
+	+	11	0
+	+	12	0
+	+	8	0
+	+	10	0
+	+	12	49
+	+	36	0
+	+	36	1
+	+	36	0
+	+	36	44
+	+	45	79
+	+	45	0
+	+	45	0
+	+	45	1
+	+	45	0
+	+	45	1
+	+	45	0
+	+	45	81
+	+	45	25
+	+	45	25
+	+	1	1
+	+	12	27
+	+	10	63
+	+	8	12
+	+	10	28
+	+	11	13
+	+	45	25
+	+	45	26
+	+	46	35
+	+	2	31
+	+	3	31
+	+	22	0
+	+	22	12
+	+	23	17
+	+	24	13
+	+	25	1
+	+	36	19
+	+	47	42
+	+	12	28
+	+	25	28
+	+	45	19
+	+	45	25
+	+	45	26
+	+	45	81
+	+	36	38
+	+	38	22
+	+	48	43
+	+	37	35
+	+	4	33
+	+	10	36
+	+	23	36
+	+	26	17
+	+	12	49
+	+	12	31
+	+	12	31
+	+	26	0
+	+	13	21
+	+	26	21
+	+	13	0
+	+	9	21
+	+	10	3
+	+	9	18
+	+	26	18
+	+	11	3
+	+	12	3
+	+	23	3
+	+	24	3
+	+	25	4
+	+	23	48
+	+	39	0
+	+	41	31
+	+	5	32
+	+	49	43
+	+	41	31
+	+	45	0
+	+	14	0
+	+	20	81
+	+	45	0
+	+	46	0
+	+	27	0
+	+	28	0
+	+	44	50
+	+	50	39
+	+	6	30
+	+	44	31
+
+> ~/myproject/myapp/models.py
+	"	64	8
+	.	7	0
+	+	47	23
+	+	48	44
+	+	47	19
+	+	48	36
+	+	73	46
+	+	74	0
+	+	75	0
+	+	76	0
+	+	77	0
+	+	78	0
+	+	79	0
+	+	80	0
+	+	81	0
+	+	82	0
+	+	74	33
+	+	75	44
+	+	76	55
+	+	77	46
+	+	78	42
+	+	79	54
+	+	80	57
+	+	81	48
+	+	82	48
+	+	83	0
+	+	84	0
+	+	83	31
+	+	84	48
+	+	83	47
+	+	85	0
+	+	87	4
+	+	88	3
+	+	89	37
+	+	102	0
+	+	86	0
+	+	102	28
+	+	85	76
+	+	86	76
+	+	71	51
+	+	100	0
+	+	100	51
+	+	93	0
+	+	7	0
+	+	7	34
+	+	93	0
+	+	15	0
+	+	13	1
+	+	94	0
+	+	7	8
+	+	94	18
+	+	4	29
+	+	5	29
+	+	4	0
+	+	5	0
+	+	7	42
+	+	2	9
+	+	94	12
+	+	93	0
+	+	94	22
+	+	94	28
+	+	94	26
+	+	95	24
+	+	96	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	24
+	+	97	23
+	+	97	4
+	+	97	50
+	+	100	0
+	+	100	8
+	+	100	37
+	+	100	43
+	+	100	43
+	+	100	43
+	+	100	42
+	+	100	42
+	+	100	42
+	+	100	8
+	+	100	0
+	+	100	40
+	+	100	46
+	+	100	46
+	+	100	46
+	+	7	31
+	+	100	0
+	+	97	0
+	+	94	18
+	+	95	7
+	+	96	6
+	+	95	41
+	+	96	42
+	+	95	40
+	+	94	0
+	+	95	0
+	+	7	0
+
+> ~/readme
+	"	15	0
+	^	15	128
+	.	15	121
+	+	5	20
+	+	6	0
+	+	5	3
+	+	10	39
+	+	8	23
+	+	11	0
+	+	15	121
+
+> ~/myproject/myproject/settings.py
+	"	43	0
+	.	43	0
+	+	43	11
+	+	51	0
+	+	56	0
+	+	56	4
+	+	26	0
+	+	43	0
+	+	70	51
+	+	50	0
+	+	70	0
+	+	71	0
+	+	27	0
+	+	27	0
+	+	28	0
+	+	27	0
+	+	27	0
+	+	28	0
+	+	27	49
+	+	89	13
+	+	87	30
+	+	31	12
+	+	89	9
+	+	89	20
+	+	89	0
+	+	85	38
+	+	87	0
+	+	43	16
+	+	43	0
+
+> ~/myproject/myapp/views.py
+	"	7	0
+	^	19	55
+	.	18	74
+	+	73	53
+	+	73	21
+	+	12	32
+	+	73	46
+	+	73	4
+	+	73	64
+	+	77	0
+	+	77	0
+	+	77	0
+	+	73	41
+	+	73	50
+	+	73	8
+	+	73	8
+	+	73	0
+	+	73	22
+	+	73	64
+	+	73	0
+	+	73	0
+	+	77	4
+	+	77	30
+	+	77	68
+	+	77	11
+	+	77	15
+	+	77	59
+	+	6	35
+	+	77	0
+	+	77	12
+	+	6	0
+	+	77	0
+	+	77	0
+	+	77	0
+	+	76	47
+	+	73	9
+	+	76	3
+	+	76	7
+	+	76	8
+	+	76	23
+	+	76	0
+	+	55	8
+	+	56	8
+	+	57	8
+	+	55	8
+	+	56	11
+	+	57	3
+	+	57	49
+	+	75	59
+	+	76	70
+	+	75	8
+	+	76	49
+	+	73	34
+	+	73	36
+	+	73	37
+	+	56	0
+	+	53	0
+	+	55	0
+	+	53	36
+	+	55	24
+	+	56	34
+	+	19	0
+	+	32	0
+	+	33	0
+	+	20	0
+	+	53	36
+	+	55	35
+	+	56	28
+	+	53	39
+	+	55	0
+	+	54	7
+	+	53	34
+	+	54	3
+	+	55	7
+	+	56	11
+	+	56	15
+	+	57	19
+	+	57	23
+	+	57	3
+	+	57	70
+	+	59	16
+	+	56	28
+	+	55	33
+	+	60	28
+	+	75	21
+	+	73	0
+	+	74	0
+	+	55	0
+	+	56	0
+	+	60	0
+	+	75	0
+	+	57	0
+	+	63	0
+	+	77	0
+	+	77	0
+	+	19	55
+	+	2	0
+	+	1	8
+	+	16	23
+	+	17	15
+	+	19	55
+	+	16	0
+	+	18	74
+	i	25	19
+
+> ~/myproject/manage.py
+	"	1	0
+
+> ~/myproject/myapp/urls.py
+	"	20	0
+	^	20	1
+	.	20	0
+	+	10	0
+	+	6	9
+	+	22	0
+	+	10	0
+	+	9	42
+	+	10	0
+	+	10	0
+	+	10	0
+	+	10	0
+	+	22	0
+	+	21	0
+	+	10	64
+	+	10	15
+	+	10	64
+	+	11	47
+	+	10	47
+	+	11	10
+	+	10	11
+	+	11	18
+	+	10	18
+	+	11	74
+	+	12	77
+	+	21	58
+	+	12	26
+	+	14	73
+	+	12	97
+	+	14	97
+	+	12	97
+	+	13	97
+	+	10	0
+	+	14	19
+	+	21	0
+	+	16	0
+	+	17	0
+	+	16	31
+	+	17	50
+	+	18	47
+	+	14	0
+	+	18	50
+	+	21	0
+	+	18	17
+	+	21	66
+	+	2	0
+	+	4	41
+	+	21	0
+	+	19	102
+	+	20	0
+
+> ~/myproject/myapp/templates/myapp/register_program.html
+	"	17	47
+	^	17	48
+	.	17	47
+	+	1	2
+	+	1	0
+	+	1	0
+	+	10	0
+	+	11	60
+	+	15	27
+	+	10	0
+	+	11	0
+	+	12	4
+	+	13	4
+	+	14	4
+	+	15	4
+	+	16	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	22	4
+	+	23	4
+	+	16	11
+	+	18	11
+	+	19	11
+	+	20	11
+	+	21	11
+	+	22	0
+	+	15	46
+	+	10	0
+	+	10	3
+	+	10	0
+	+	10	0
+	+	10	7
+	+	10	7
+	+	10	7
+	+	10	7
+	+	10	0
+	+	10	0
+	+	10	2
+	+	10	25
+	+	1	1
+	+	9	9
+	+	10	0
+	+	15	28
+	+	20	65
+	+	19	27
+	+	16	39
+	+	18	0
+	+	16	58
+	+	18	0
+	+	16	14
+	+	17	0
+	+	16	59
+	+	17	47
+
+> ~/myproject/myapp/forms.py
+	"	6	24
+	^	6	25
+	.	6	24
+	+	7	112
+	+	7	62
+	+	7	82
+	+	7	83
+	+	5	29
+	+	7	0
+	+	7	14
+	+	7	14
+	+	11	0
+	+	7	51
+	+	11	0
+	+	11	67
+	+	11	0
+	+	7	3
+	+	7	84
+	+	7	58
+	+	7	66
+	+	7	122
+	+	7	120
+	+	7	80
+	+	7	120
+	+	7	122
+	+	7	0
+	+	7	0
+	+	7	62
+	+	7	0
+	+	7	0
+	+	7	87
+	+	7	124
+	+	7	115
+	+	7	50
+	+	7	28
+	+	7	56
+	+	7	136
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	38
+	+	7	84
+	+	7	58
+	+	7	73
+	+	7	73
+	+	7	71
+	+	7	0
+	+	7	29
+	+	8	23
+	+	5	0
+	+	1	16
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	6	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	5	0
+	+	9	218
+	+	7	0
+	+	5	0
+	+	1	33
+	+	5	0
+	+	6	19
+	+	10	43
+	+	3	0
+	+	1	23
+	+	6	24
+
+> ~/myproject/myapp/old_forms.py
+	"	4	0
+
+> ~/myproject/myapp/templates/myapp/player.html
+	"	2	28
+	^	2	29
+	.	2	28
+	+	3	16
+	+	3	28
+	+	3	11
+	+	4	1
+	+	4	32
+	+	4	15
+	+	3	0
+	+	3	0
+	+	4	46
+	+	4	31
+	+	4	0
+	+	2	28
+
+> ~/myproject/models.py
+	"	1	0
+
+> ~/myproject/myapp/templates/myapp/register.html
+	"	1	0
+	.	1	0
+	+	1	38
+	+	5	6
+	+	3	29
+	+	3	19
+	+	3	30
+	+	3	7
+	+	3	27
+	+	3	5
+	+	3	0
+	+	3	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/myproject/myapp/templates/myapp/register_session.html
+	"	1	0
+	.	2	0
+	+	1	0
+	+	2	0
+
+> ~/myproject/myapp/templates/includes/tabs.html
+	"	6	88
+	^	6	89
+	.	6	89
+	+	7	0
+	+	2	79
+	+	3	83
+	+	5	83
+	+	2	52
+	+	3	52
+	+	5	52
+	+	2	80
+	+	3	79
+	+	2	75
+	+	3	81
+	+	2	81
+	+	5	89
+	+	3	100
+	+	5	86
+	+	3	112
+	+	4	0
+	+	4	0
+	+	4	88
+	+	5	103
+	+	7	26
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	6	89
+
+> ~/myproject/myapp/templates/myapp/footer.html
+	"	2	44
+	^	2	45
+	.	2	44
+	+	1	0
+	+	1	0
+	+	28	60
+	+	8	43
+	+	9	58
+	+	8	0
+	+	10	0
+	+	12	39
+	+	12	145
+	+	13	43
+	+	8	47
+	+	33	0
+	+	8	21
+	+	9	21
+	+	8	33
+	+	9	34
+	+	12	41
+	+	13	34
+	+	12	51
+	+	12	168
+	+	13	54
+	+	32	27
+	+	7	34
+	+	11	20
+	+	12	60
+	+	13	60
+	+	8	36
+	+	9	36
+	+	12	60
+	+	12	162
+	+	13	60
+	+	32	22
+	+	7	16
+	+	11	28
+	+	7	28
+	+	1	0
+	+	1	25
+	+	3	0
+	+	1	25
+	+	1	25
+	+	3	3
+	+	3	7
+	+	3	11
+	+	3	15
+	+	3	16
+	+	3	16
+	+	3	16
+	+	3	12
+	+	3	28
+	+	3	3
+	+	3	7
+	+	3	11
+	+	3	15
+	+	3	3
+	+	3	20
+	+	3	28
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	28
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	0
+	+	3	20
+	+	3	0
+	+	2	44
+
+> static/myapp/style.css
+	"	1	0
+
+> ~/myproject/myapp/templates/myapp/program.html
+	"	1	0
+	^	10	132
+	.	10	131
+	+	21	30
+	+	19	17
+	+	21	34
+	+	22	0
+	+	21	34
+	+	16	94
+	+	21	91
+	+	17	3
+	+	17	53
+	+	14	0
+	+	1	0
+	+	1	0
+	+	10	0
+	+	25	11
+	+	28	0
+	+	29	0
+	+	21	71
+	+	19	13
+	+	20	14
+	+	19	0
+	+	20	0
+	+	21	85
+	+	10	0
+	+	10	0
+	+	10	7
+	+	26	5
+	+	1	51
+	+	26	31
+	+	27	23
+	+	17	116
+	+	25	7
+	+	24	7
+	+	23	7
+	+	22	7
+	+	22	3
+	+	22	11
+	+	21	19
+	+	20	7
+	+	19	7
+	+	22	11
+	+	18	7
+	+	16	7
+	+	17	7
+	+	15	7
+	+	14	7
+	+	11	7
+	+	1	33
+	+	5	3
+	+	11	12
+	+	14	11
+	+	21	150
+	+	17	64
+	+	21	145
+	+	6	0
+	+	2	0
+	+	3	60
+	+	10	99
+	+	14	145
+	+	14	14
+	+	14	153
+	+	10	50
+	+	10	146
+	+	10	50
+	+	22	0
+	+	10	123
+	+	12	26
+	+	13	27
+	+	10	83
+	+	6	0
+	+	5	37
+	+	10	89
+	+	3	60
+	+	1	22
+	+	10	3
+	+	11	119
+	+	11	0
+	+	10	0
+	+	10	140
+	+	1	0
+	+	8	139
+	+	10	154
+	+	9	57
+	+	10	142
+	+	9	71
+	+	8	126
+	+	9	70
+	+	8	114
+	+	8	172
+	+	10	105
+	+	9	81
+	+	8	137
+	+	9	39
+	+	8	125
+	+	9	32
+	+	10	111
+	+	10	111
+	+	10	51
+	+	11	0
+	+	9	0
+	+	10	131
+
+> ~/myproject/myapp/templates/myapp/session.html
+	"	10	0
+	^	3	61
+	.	3	60
+	+	1	12
+	+	1	0
+	+	5	50
+	+	7	0
+	+	7	21
+	+	12	23
+	+	11	20
+	+	12	25
+	+	13	32
+	+	7	30
+	+	10	59
+	+	9	36
+	+	7	27
+	+	9	32
+	+	10	41
+	+	8	39
+	+	9	66
+	+	5	0
+	+	6	0
+	+	5	35
+	+	9	58
+	+	2	0
+	+	3	60
+	+	10	62
+	+	10	97
+	+	3	60
+
+> ~/myproject/myapp/templates/myapp/program.
+	"	1	0
+
+> ~/myproject/myapp/templates/myapp/registerForm.py
+	"	1	0
+	^	5	65
+	.	5	39
+	+	4	66
+	+	5	39
+
+> ~/myproject/myapp/templates/myapp/selectProgram.html
+	"	1	0
+	^	9	132
+	.	9	132
+	+	12	11
+	+	8	30
+	+	9	49
+	+	8	31
+	+	9	97
+	+	11	25
+	+	13	90
+	+	14	19
+	+	19	24
+	+	7	12
+	+	8	0
+	+	9	130
+	+	2	0
+	+	2	0
+	+	3	11
+	+	5	4
+	+	3	64
+	+	7	34
+	+	9	132
+
+> ~/myproject/myapp/templates/myapp/header.html
+	"	1	0
+	^	26	19
+	.	29	0
+	+	1	0
+	+	2	0
+	+	29	31
+	+	30	0
+	+	15	8
+	+	15	94
+	+	26	18
+	+	29	0
+
+> ~/myproject/myapp/templates/myapp/sudo
+	"	1	0
 
 > ~/myproject/myapp/static/myapp/position.css
 	"	30	2
@@ -477,324 +1535,6 @@
 	+	1	10
 	+	1	1
 	+	30	2
-
-> ~/myproject/myapp/templates/myapp/header.html
-	"	26	18
-	^	26	19
-	.	26	18
-	+	1	0
-	+	2	0
-	+	32	31
-	+	33	0
-	+	15	8
-	+	15	94
-	+	26	18
-
-> ~/myproject/myapp/templates/includes/tabs.html
-	"	2	81
-	^	2	82
-	.	2	81
-	+	5	0
-	+	2	79
-	+	3	83
-	+	4	83
-	+	2	52
-	+	3	52
-	+	4	52
-	+	2	80
-	+	3	79
-	+	2	75
-	+	3	81
-	+	2	81
-
-> ~/readme
-	"	1	0
-	^	15	128
-	.	15	121
-	+	5	20
-	+	6	0
-	+	5	3
-	+	10	39
-	+	8	23
-	+	11	0
-	+	15	121
-
-> ~/myproject/myapp/admin.py
-	"	14	23
-	^	13	49
-	.	13	48
-	+	38	50
-	+	1	32
-	+	2	32
-	+	6	0
-	+	6	0
-	+	6	0
-	+	6	0
-	+	8	0
-	+	9	4
-	+	10	4
-	+	38	0
-	+	8	0
-	+	9	0
-	+	10	0
-	+	6	0
-	+	8	0
-	+	10	49
-	+	18	0
-	+	18	1
-	+	18	0
-	+	18	44
-	+	28	79
-	+	23	0
-	+	24	0
-	+	25	1
-	+	26	0
-	+	27	1
-	+	28	0
-	+	28	81
-	+	25	25
-	+	27	25
-	+	1	1
-	+	10	27
-	+	8	63
-	+	6	12
-	+	8	28
-	+	9	13
-	+	25	25
-	+	27	26
-	+	38	35
-	+	2	31
-	+	3	31
-	+	12	0
-	+	12	12
-	+	13	17
-	+	14	13
-	+	15	1
-	+	18	19
-	+	39	42
-	+	10	28
-	+	15	28
-	+	30	19
-	+	33	25
-	+	35	26
-	+	36	81
-	+	18	38
-	+	20	22
-	+	40	43
-	+	19	35
-	+	4	33
-	+	8	36
-	+	13	36
-	+	16	17
-	+	10	49
-	+	10	31
-	+	10	31
-	+	16	0
-	+	11	21
-	+	16	21
-	+	11	0
-	+	7	21
-	+	8	3
-	+	7	18
-	+	16	18
-	+	9	3
-	+	10	3
-	+	13	3
-	+	14	3
-	+	15	4
-	+	13	48
-
-> ~/myproject/myapp/views.py
-	"	15	88
-	^	15	89
-	.	15	89
-	+	11	29
-	+	9	25
-	+	8	59
-	+	9	61
-	+	8	33
-	+	4	31
-	+	1	36
-	+	6	0
-	+	1	50
-	+	9	4
-	+	11	0
-	+	10	50
-	+	9	51
-	+	10	34
-	+	11	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	4	0
-	+	1	35
-	+	12	17
-	+	1	30
-	+	21	70
-	+	13	3
-	+	14	47
-	+	18	17
-	+	19	29
-	+	21	66
-	+	10	32
-	+	4	31
-	+	8	32
-	+	9	51
-	+	12	26
-	+	14	47
-	+	18	17
-	+	19	29
-	+	21	66
-	+	12	41
-	+	18	51
-	+	19	47
-	+	20	0
-	+	20	0
-	+	20	17
-	+	20	29
-	+	5	31
-	+	20	7
-	+	21	91
-	+	22	32
-	+	24	15
-	+	24	0
-	+	24	0
-	+	28	0
-	+	18	0
-	+	24	52
-	+	25	32
-	+	26	0
-	+	28	0
-	+	26	29
-	+	20	0
-	+	21	0
-	+	26	47
-	+	27	0
-	+	20	0
-	+	27	49
-	+	12	31
-	+	20	40
-	+	14	52
-	+	15	0
-	+	15	83
-	+	16	66
-	+	18	0
-	+	16	65
-	+	15	62
-	+	12	25
-	+	14	44
-	+	15	76
-	+	12	21
-	+	14	41
-	+	15	60
-	+	20	77
-	+	16	83
-	+	20	49
-	+	15	78
-	+	16	84
-	+	28	0
-	+	16	86
-	+	17	36
-	+	16	8
-	+	17	8
-	+	16	85
-	+	27	60
-	+	9	37
-	+	16	65
-	+	15	89
-	i	16	19
-
-> ~/myproject/myapp/models.py
-	"	1	0
-	^	18	0
-	.	17	24
-	+	1	25
-	+	1	51
-	+	1	4
-	+	1	25
-	+	1	1
-	+	1	28
-	+	1	0
-	+	1	4
-	+	1	0
-	+	1	4
-	+	1	28
-	+	30	25
-	+	24	56
-	+	23	3
-	+	24	3
-	+	33	71
-	+	32	17
-	+	4	32
-	+	2	0
-	+	1	14
-	+	23	55
-	+	23	0
-	+	23	0
-	+	24	0
-	+	23	4
-	+	19	12
-	+	21	14
-	+	26	7
-	+	26	31
-	+	49	39
-	+	13	43
-	+	14	29
-	+	13	39
-	+	14	45
-	+	27	41
-	+	50	41
-	+	27	41
-	+	56	42
-	+	60	56
-	+	34	0
-	+	35	0
-	+	40	27
-	+	35	0
-	+	23	52
-	+	24	52
-	+	52	18
-	+	55	0
-	+	27	0
-	+	53	13
-	+	53	4
-	+	53	82
-	+	22	78
-	+	53	77
-	+	38	38
-	+	39	34
-	+	58	38
-	+	59	40
-	+	58	44
-	+	39	40
-	+	38	44
-	+	17	24
-
-> ~/myproject/myapp/urls.py
-	"	1	0
-	^	9	20
-	.	9	19
-	+	7	0
-	+	3	9
-	+	11	0
-	+	7	0
-	+	6	42
-	+	7	0
-	+	7	0
-	+	7	0
-	+	7	0
-	+	11	0
-	+	10	0
-	+	8	64
-	+	7	15
-	+	8	64
-	+	9	47
-	+	8	47
-	+	9	10
-	+	8	11
-	+	9	18
-	+	8	18
-	+	9	19
 
 > ~/myproject/myproject/templates/admin/base_site.html
 	"	1	0
@@ -814,31 +1554,6 @@
 	+	3	19
 	+	10	1
 	+	8	57
-
-> ~/myproject/myproject/settings.py
-	"	31	12
-	^	31	13
-	.	31	12
-	+	43	11
-	+	51	0
-	+	56	0
-	+	56	4
-	+	26	0
-	+	43	0
-	+	70	51
-	+	50	0
-	+	70	0
-	+	71	0
-	+	27	0
-	+	27	0
-	+	28	0
-	+	27	0
-	+	27	0
-	+	28	0
-	+	27	49
-	+	89	13
-	+	88	30
-	+	31	12
 
 > ~/myproject/myapp/fixtures/location.json
 	"	1	0
@@ -867,9 +1582,6 @@
 	+	1	9
 
 > ~/myproject/myapp/static/myapp/pos
-	"	1	0
-
-> ~/myproject/manage.py
 	"	1	0
 
 > ~/myproject/myapp/templates/myapp/static/myapp/position.css

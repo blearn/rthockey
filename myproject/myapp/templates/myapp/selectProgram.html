@@ -1,0 +1,23 @@
+{% include "myapp/header.html" %}
+        <div id="tabs">
+            {% include "includes/tabs.html" with active_tab='tab2' %}
+        </div>
+    <div id="main" class="container">
+        <div class="outlined_normal" id="article">
+        <h2>Register for a Program</h2>
+        {% if available_programs_list %}
+            There are {{ available_programs_list|length }} program{% if available_programs_list|length > 1 %}s{% endif %} available.
+            <ul>
+            {% for program in available_programs_list %}
+                <li>
+                    <a href="{% url 'myapp:program' program.id %}">{{ program.title }}</a>
+                    <!-- add start and end dates from sessions -->
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No programs are available.</p>
+        {% endif %}
+        </div> <!-- article -->
+    </div> <!-- main -->
+{% include "myapp/footer.html" %}

@@ -1,24 +1,25 @@
 body{
-background-image:url("./ice_texture.jpg");
+    background-image:url("./ice_texture.jpg");
 }
 
 a{
-color:#428bca;
+    color:#428bca;
 }
 
 .title{
-position:relative;
-top:20px;
-left:3%;
-font-family: 'Roboto Slab', serif;
-font-weight: bold;
-font-size: 72pt;
-color: white;
-text-shadow:
--1px -1px 0 #000,
-1px -1px 0 #000,
--1px 1px 0 #000,
-1px 1px 0 #000;
+    position:absolute;
+    top:20px;
+    margin-left:6%;
+    width:88%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 72pt;
+    color: #663333;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .outlined_normal{
@@ -33,70 +34,14 @@ text-shadow:
 }
 
 #article{
-margin:10px;
-clear:left;
+    margin:10px;
+    clear:left;
 }
 
-/* bottom cells */
-div.col-md-5{
-font-weight: bold;
-font-family: 'Roboto Slab', serif;
-font-size: 20pt;
-color: white;
-text-shadow:
--1px -1px 0 #000,
-1px -1px 0 #000,
--1px 1px 0 #000,
-1px 1px 0 #000;
-}
-
-
-.override div.col-md-5{
-font-size: 10pt;
-font-weight: normal;
-}
-
-#contact{
-text-align:right;
-}
-
-#header ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#header li {
-    float: left;
-    border: 1px solid #bbb;
-    border-bottom-width: 0;
-    margin: 0;
-}
-
-#header a {
-    text-decoration: none;
-    display: block;
-    background: #eee;
-    padding: 0.24em 1em;
-    color: #00c;
-    width: 8em;
-    text-align: center;
-}
-
-#header a:hover {
-    background: #ddf;
-}
-
-#header .selected {
-    border-color: black;
-}
-
-#header .selected a {
-    position: relative;
-    top: 1px;
-    background: white;
-    color: black;
-    font-weight: bold;
+#article_centred{
+    margin-left:auto;
+    margin-right:auto;
+    width:20%;
 }
 
 #content {
@@ -110,48 +55,97 @@ h1 {
     padding: 0 0 1em 0;
 }
 
-#page{
-height: 100%;
+#tabs{
+    position:absolute;
+    top:215px;
+    left:6%;
+    width:88%;
+    z-index:5;
+    background-color:#777;
 }
 
-#tabs{
-position:relative;
-top:77px;
-left:723px;
+#tabs ul {
+    list-style: none;
+    margin: 0;
+}
+
+#tabs li {
+    float: left;
+    border: 1px solid #000;
+    border-bottom-width: 0;
+    margin: 0;
+}
+
+#tabs a {
+    text-decoration: none;
+    display: block;
+    background: #777777;
+    padding: 0.24em 1em;
+    /*color: #00c;*/
+    color: #633;
+    width: 8em;
+    text-align: center;
+    font-weight:bold;
+}
+
+#tabs a:hover {
+    background: #ddf;
+}
+
+#tabs .selected {
+    border-color: black;
+}
+
+#tabs .selected a {
+    position: relative;
+    top: 1px;
+    background: white;
+    color:#633;
+    font-weight: bold;
 }
 
 #header{
-/*position:relative;
-top:0px;
-left:0px;
-width:1680px;*/
-position:relative;
-height: 244px;
-width:1680px;
-margin-left:auto;
-margin-right:auto;
-background-image: url("./rink_banner.jpg");
-background-position: center;
-z-index:2;
+    position:relative;
+    z-index:2;
 }
 
 #main{
-position:absolute;
-top:0px;
-left:10%;
-width:80%;
-height:100%;
-padding-top:244px;
-background-color:#4C4C4C;
+    position:absolute;
+    top:0px;
+    left:6%;
+    width:88%;
+    min-height:98%;
+    /* move below header */
+    padding-top:244px;
+    border-radius:4px;
+    background-image: url("./rink.jpg");
+    background-repeat: no-repeat;
 }
 
+.slide{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    max-height:700px;
+}
+
+#frmRegisterProgram p input{
+    color: black;
+}
+
+/* bottom cells */
 #footer{
-position:absolute;
-bottom:2%;
-left:10%;
-width:80%;
-}
-
-#about{
-width:300px;
+    position:absolute;
+    bottom:25px;
+    left:6%;
+    width:88%;
+    height:28px;
+    text-align:right;
+    padding-right:20px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }

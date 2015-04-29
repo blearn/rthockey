@@ -1,0 +1,51 @@
+{% block extrahead %}
+<script type="text/javascript" charset="utf-8" src="/static/js/slides.min.jquery.js"></script>
+<script>
+    $(function(){
+        $("#slides").slides({
+            preload        : true,
+            preloadImage   : "{{ media_url }}img/loading.gif",
+            play           : 0,
+            autoHeight     : true,
+            pause          : 2500,
+            crossfade      : true,
+            hoverPause     : true,
+            slideSpeed     : 1000,
+            animationStart: function(current){
+                $('.caption').animate({
+                    bottom:-35
+                }, 100);
+            },
+            animationComplete: function(current){
+                $('.caption').animate({
+                    bottom:15
+                }, 200);
+            },
+            slidesLoaded: function() {
+                $('.caption').animate({
+                    bottom:15
+                }, 200);
+            },
+        });
+    });
+</script>
+{% endblock %}
+
+<div id="slides">
+    <div class="slides_container">
+        {% for img in image_list %}
+        <!-- SLIDE -->
+            <div class="slide">
+                <a href="{{ img.image_url }}">
+                <img border="0" alt="" src="{{ img.image_url }}"
+                    {% if img.height > 540 %} height="540" {% endif %}>
+                </a>
+                <div class="caption" style="bottom:0">
+                    <p>{% if img.title %} {{ img.title }} - {% endif %}{{ img.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="#" class="prev"><img src="{{ media_url }}img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+    <a href="#" class="next"><img src="{{ media_url }}img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+</div>

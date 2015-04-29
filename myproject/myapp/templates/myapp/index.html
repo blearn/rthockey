@@ -1,7 +1,11 @@
 {% include "myapp/header.html" %}
+        <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='tab1' %}
+        </div>
         <div id="main" class="container">
             <div class="outlined_normal" id="article">
-                RT Hockey offers comprehensive ice hockey training for players and skaters of all ages and abilities. Professional staff offer clinics and programs in the following areas:
+                <h2>Welcome</h2>
+                <p>RT Hockey offers comprehensive ice hockey training for players and skaters of all ages and abilities.</p><p>Professional staff offer clinics and programs in the following areas:</p>
                 <ul>
                 <li>Individual and Group Lessons</li>
                 <li>Power Skating</li>
@@ -12,15 +16,5 @@
                 <li>Learn-to-Skate</li>
                 </ul>
             </div>
-            <button type="button" class="btn">Basic Button</button>
-{% if latest_program_list %}
-    {% for program in latest_program_list %}
-    <div class="outlined_normal" id="program">
-        <a href="{% url 'myapp:program' program.id %}">{{ program.title }}</a>
-    </div>
-    {% endfor %}
-{% else %}
-    <p>No programs are available.</p>
-{% endif %}
         </div> <!-- /main -->
 {% include "myapp/footer.html" %}
