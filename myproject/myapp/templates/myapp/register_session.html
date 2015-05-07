@@ -1,0 +1,23 @@
+{% include "myapp/header.html" %}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+    $('.datepicker').datepicker();
+});
+</script>
+    <div id="tabs">
+    {% include "includes/tabs.html" with active_tab='tab2' %}
+    </div>
+    <div id="main" class="container">
+        <div class="outlined_normal" id="article">
+            <h2>Register for: {{ session.title }}</h2>
+            <form method="post" class="register_form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit" class="button" class="button" />
+            </form>
+        </div>
+    </div> <!-- /main -->
+{% include "myapp/footer.html" %}

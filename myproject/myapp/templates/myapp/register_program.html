@@ -1,5 +1,5 @@
 {% include "myapp/header.html" %}
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script>
@@ -13,11 +13,12 @@ $(document).ready(function() {
     <div id="main" class="container">
         <div class="outlined_normal" id="article">
             <h2>Register for: {{ program.title }}</h2>
-            <!--form action="/myapp/player/" method="post"-->
-            <form method="post" id="frmRegisterProgram">
+            <form method="post" class="register_form">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Submit" class="button" />
+                <table>
+                {{ form.as_table }}
+                </table>
+                <input type="submit" value="Submit" class="button" class="button" />
             </form>
         </div>
     </div> <!-- /main -->

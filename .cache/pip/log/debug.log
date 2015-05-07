@@ -1318,3 +1318,10 @@ Uninstalling djangocms-slideshow-0.1.5:
   /home/ubuntu/env/lib/python2.7/site-packages/slideshow/widgets.py
   /home/ubuntu/env/lib/python2.7/site-packages/slideshow/widgets.pyc
   Successfully uninstalled djangocms-slideshow-0.1.5
+Collecting Django
+  Downloading Django-1.8-py2.py3-none-any.whl (6.2MB)
+Installing collected packages: Django
+  Found existing installation: Django 1.7.5
+    Uninstalling Django-1.7.5:
+      Successfully uninstalled Django-1.7.5
+Successfully installed Django-1.8

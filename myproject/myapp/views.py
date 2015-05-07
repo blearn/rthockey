@@ -10,6 +10,7 @@ from myapp.forms import RegisterForm
 from myapp.models import Program
 from myapp.models import Session
 from myapp.models import Customer
+from myapp.models import Registration
 
 def index(request):
     latest_program_list = Program.objects.order_by('-create_date')[:5]
@@ -42,7 +43,14 @@ def selectProgram(request):
 def register_session(request, session_id):
     try:
         session = Session.objects.get(pk=session_id)
-        form = RegisterForm()
+        if request.method =='POST':
+            form = RegisterForm(request.POST)
+            if form.is_valid():
+                customer = form.save()
+                registration = Registration.objects.create(customer=customer, session=session)
+                return HttpResponseRedirect('/player/%s', customer.id)
+        else:
+            form = RegisterForm()
     except Session.DoesNotExist:
         raise Http404("Session does not exist")
     return render(request, 'myapp/register_session.html', {'session':session, 'form':form})
@@ -54,6 +62,7 @@ def register_program(request, program_id):
             form = RegisterForm(request.POST)
             if form.is_valid():
                 customer = form.save()
+                registration = Registration.objects.create(customer=customer, program=program)
                 return HttpResponseRedirect('/player/%s', customer.id)
         else:
             form = RegisterForm()
@@ -67,8 +76,8 @@ def gallery(request):
 def contact(request):
     return render(request, 'myapp/contact.html')
 
-def about(request):
-    return render(request, 'myapp/about.html')
+#def about(request):
+#    return render(request, 'myapp/about.html')
 
 def player(request):
     if request.method == 'POST':

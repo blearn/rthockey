@@ -1,5 +1,10 @@
+/* don't load ice background for mobile */
 body{
+}
+@media (min-width:43.75em){ 
+  body{
     background-image:url("./ice_texture.jpg");
+  }
 }
 
 a{
@@ -9,12 +14,43 @@ a{
 .title{
     position:absolute;
     top:20px;
-    margin-left:6%;
-    width:88%;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    font-size: 72pt;
+    margin-left:2%;
+ /*   font-size: 72pt;*/
     color: #663333;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 3.2em;
+    letter-spacing: -1px;
+    line-height: 1.25;
+}
+@media (min-width: 43.75em) {
+    .title{
+        margin-left:7.5%;
+        /*width:85%;*/
+        font-size: 4em;
+        letter-spacing: normal;
+        line-height: 1.125;
+        max-width: 14.4em;
+    }
+}
+@media (min-width: 56.25em) {
+    .title{
+        font-size: 5em;
+        letter-spacing: normal;
+        line-height: 1.05;
+        max-width: 12.66667em;
+    }
+}
+
+.outlined_normal{
+    font-family: 'Roboto Slab', serif;
+/*    font-size: 15pt;*/
+    color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -22,20 +58,14 @@ a{
     1px 1px 0 #000;
 }
 
-.outlined_normal{
-font-family: 'Roboto Slab', serif;
-font-size: 15pt;
-color:white;
-text-shadow:
--1px -1px 0 #000,
-1px -1px 0 #000,
--1px 1px 0 #000,
-1px 1px 0 #000;
-}
-
 #article{
     margin:10px;
     clear:left;
+}
+
+/* contact */
+div.row{
+    margin-left:10px;
 }
 
 #article_centred{
@@ -50,23 +80,44 @@ text-shadow:
     padding: 0 1em;
 }
 
-h1 {
-    margin: 0;
-    padding: 0 0 1em 0;
+/* Typography */
+#page {
+  font-size: 1em;
+  line-height: 1.25;
+}
+@media (min-width: 43.75em) {
+  #page {
+    font-size: 1.2em;
+    line-height: 1.375;
+  }
+}
+@media (min-width: 56.25em) {
+  #page {
+    font-size:1.3em;
+    line-height:1.5;
+  }
 }
 
 #tabs{
     position:absolute;
-    top:215px;
-    left:6%;
-    width:88%;
+    /* mobile tab position */
+    top:100px;
+    width:100%;
+    max-width:1680px;
     z-index:5;
     background-color:#777;
+}
+@media (min-width: 43.75em) {
+  #tabs{
+    top:140px;
+    left:6%;
+    width:88%;
+  }
 }
 
 #tabs ul {
     list-style: none;
-    margin: 0;
+    margin-left:-10px;
 }
 
 #tabs li {
@@ -80,12 +131,18 @@ h1 {
     text-decoration: none;
     display: block;
     background: #777777;
-    padding: 0.24em 1em;
-    /*color: #00c;*/
     color: #633;
-    width: 8em;
     text-align: center;
     font-weight:bold;
+    /* enlarged buttons for mobile */
+    padding: 1em 2.5em;
+    width: 9em;
+}
+@media (min-width:43.75em){
+  #tabs a{
+    padding:0.24em 1em;
+    width:8em;
+  }
 }
 
 #tabs a:hover {
@@ -112,14 +169,19 @@ h1 {
 #main{
     position:absolute;
     top:0px;
-    left:6%;
-    width:88%;
     min-height:98%;
+    width:100%;
     /* move below header */
-    padding-top:244px;
+    padding-top:190px;
     border-radius:4px;
     background-image: url("./rink.jpg");
     background-repeat: no-repeat;
+}
+@media (min-width: 43.75em) {
+  #main{
+    left:6%;
+    width:88%;
+  }
 }
 
 .slide{
@@ -129,16 +191,23 @@ h1 {
     max-height:700px;
 }
 
-#frmRegisterProgram p input{
+/* registration form */
+.register_form input{
     color: black;
+}
+
+.button{
+    color:black;
+}
+
+input{
+    margin:10px;
 }
 
 /* bottom cells */
 #footer{
     position:absolute;
     bottom:25px;
-    left:6%;
-    width:88%;
     height:28px;
     text-align:right;
     padding-right:20px;
@@ -148,4 +217,10 @@ h1 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+@media (min-width: 43.75em) {
+  #footer{
+    left:6%;
+    width:88%;
+  }
 }

@@ -3,13 +3,18 @@ from myapp.models import Program
 from myapp.models import Session
 from myapp.models import Location
 from myapp.models import Customer
-from myapp.models import Image
+from myapp.models import Registration
+#from myapp.models import Image
+
+class RegistrationInline(admin.TabularInline):
+    model = Registration
 
 class ProgramAdmin(admin.ModelAdmin):
     save_as = True
     list_display = ['title', 'priority', 'status', 'create_date', 'modify_date']
     ordering = ['priority', 'title']
     actions = ['publish_programs']
+    inlines = (RegistrationInline,)
 
 def publish_programs(self, request, queryset):
 	rows_updated = queryset.update(status='p')
@@ -24,6 +29,7 @@ class SessionAdmin(admin.ModelAdmin):
     ordering = ['title']
     actions = ['publish_sessions']
     save_as = True
+    inlines = (RegistrationInline,)
 
 def publish_sessions(self, request, queryset):
 	rows_updated = queryset.update(status='p')
@@ -39,12 +45,13 @@ class LocationAdmin(admin.ModelAdmin):
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = ['firstname']
+    inlines = (RegistrationInline,)
 
-class PictureAdmin(admin.ModelAdmin):
-    list_display = ['name', 'url']
+#class PictureAdmin(admin.ModelAdmin):
+ #   list_display = ['name', 'url']
 
 admin.site.register(Program, ProgramAdmin)
 admin.site.register(Session, SessionAdmin)
 admin.site.register(Location, LocationAdmin)
 admin.site.register(Customer, CustomerAdmin)
-admin.site.register(Image, PictureAdmin)
+#admin.site.register(Image, PictureAdmin)

@@ -1410,3 +1410,251 @@ ls
 sudo vim settings.py
 cd -
 python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/slideshow.html 
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/about.html
+sudo vim templates/myapp/old_footer.html 
+sudo vim templates/myapp/contact.html
+sudo vim templates/myapp/about.html
+sudo vim templates/myapp/contact.html
+sudo vim templates/myapp/gallery.html 
+sudo vim templates/myapp/contact.html
+sudo vim templates/myapp/gallery.html 
+sudo vim templates/myapp/slideshow.html 
+sudo vim templates/myapp/gallery.html 
+ls
+ls -lf
+ls -l
+ls
+cd ..
+ls
+git add .
+git status
+git commit -a -m 'alpha'
+sudo git commit -a -m 'alpha'
+git push -u origin master
+exit
+cd myproject/myapp/
+ls
+pip uninstall djangocms-slideshow
+source ~/env/bin/activate
+pip uninstall djangocms-slideshow
+ls
+cd ~
+ls
+sudo vim readme 
+ls
+cd myproject/myapp/static/myapp/
+ls
+sudo mv ~/*.jpg .
+ls
+sudo mv ~/*.png .
+ls
+cd ../..
+ls
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/slideshow.html 
+ls
+sudo vim models.py
+sudo vim templates/myapp/slideshow.html 
+sudo vim admin.py
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/gallery.html
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/gallery.html
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/gallery.html
+sudo vim templates/myapp/contact.html
+sudo vim static/myapp/style.css 
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim models.py
+exit
+cd myproject/mya
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/index.html 
+sudo vim templates/myapp/contact.html 
+sudo vim templates/myapp/register
+sudo vim templates/myapp/register_program.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/register_program.html 
+sudo vim static/myapp/style.css 
+sudo vim models.py
+sudo vim forms.py
+sudo vim models.py
+sudo vim views.py
+sudo vim models.py
+python ../manage.py makemigrations
+sudo vim models.py
+python ../manage.py makemigrations
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim views.py
+python ../manage.py makemigrations
+python ../manage.py syncdb
+python ../manage.py makemigrations
+python ../manage.py migrate
+cd ../myproject/
+ls
+sudo vim settings.py
+python ../manage.py sql
+python ../manage.py sql user
+python ../manage.py sql users
+python ../manage.py shell
+cd -
+sudo vim models.py
+python ../manage.py shell
+ls
+sudo vim admin.py
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+python ../manage.py shell
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim admin.py
+ls
+python ../manage.py reset myapp
+python ../manage.py sqlclear myapp | ./manage.py dbshell
+python ../manage.py sqlflush myapp | ../manage.py dbshell
+python ../manage.py sqlclear
+python ../manage.py sqlclear myapp
+python ../manage.py flush myapp
+python ../manage.py flush
+ls
+python ../manage.py makemigrations
+python ../manage.py migrate
+python ../manage.py syncdb
+sudo vim ../myproject/settings.py
+python ../manage.py syncdb
+sudo vim admin.py
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+python ../manage.py dbshell
+python ../manage.py shell
+git status
+sudo vim views.py
+sudo vim models.py
+sudo vim admin.py
+sudo vim models.py
+sudo vim templates/myapp/register_program.html 
+python ../manage.py makemigrations
+sudo vim admin.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+source ~/env/bin/activate
+python ../manage.py makemigrations
+python ../manage.py migrate
+python ../manage.py syncdb --all
+python ../manage.py migrate
+pip install -U Django
+python ../manage.py shell
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+ls
+cd static/myapp/
+ls
+sudo vim style.css 
+cd ../..
+ls
+sudo vim templates/myapp/header.html 
+sudo vim static/myapp/style.css 
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+ls
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/header.html 
+sudo vim templates/myapp/footer.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/header.html 
+sudo vim templates/myapp/register_program.html 
+sudo vim templates/myapp/register_session.html 
+ls
+sudo vim admin.py
+sudo vim models.py
+sudo vim admin.py
+sudo vim models.py
+sudo vim admin.py
+python ../manage.py makemigrations
+sudo vim admin.py
+python ../manage.py makemigrations
+sudo vim admin.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim admin.py
+ls
+sudo vim fixtures/
+ls
+cd migrations/
+ls
+q
+cd ..
+ls
+sudo vim forms.py
+sudo vim models.py
+sudo vim forms.py
+sudo vim templates/myapp/register_program.html 
+sudo vim views.py
+sudo vim urls.py
+sudo vim views.py
+sudo vim models.py
+python ../manage.py makemigrations
+python ../manage.py migrate
+sudo vim urls.py
+sudo vim views.py
+exit
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myproject/
+ls
+cd myapp/
+ls
+sudo vim templates/myapp/register_program.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/about.html 
+sudo vim templates/myapp/contact.html 
+sudo vim templates/myapp/about.html 
+sudo vim templates/myapp/contact.html 
+sudo vim urls.py
+sudo vim views.py
+sudo vim templates/includes/tabs.html 
+sudo vim templates/myapp/contact.html
+sudo vim static/myapp/style.css 
+exit
+source ~/env/bin/activate
+cd myproject/
+ls
+python manage.py runserver 0.0.0.0:8000
+exit

@@ -81,8 +81,8 @@ class Customer(models.Model):
     weight_pounds = models.CharField(max_length=3)
     is_locked = models.BooleanField(default=True)
     other_phones = models.CharField(max_length=1000)
-    create_date = models.DateTimeField(editable=False, default=timezone.now())
-    modify_date = models.DateTimeField(editable=False, default=timezone.now())
+    create_date = models.DateTimeField(editable=False)
+    modify_date = models.DateTimeField(editable=False)
     
     def save(self, *args, **kwargs):
         ''' on save, update timestamp '''
@@ -91,9 +91,24 @@ class Customer(models.Model):
         self.modify_date = timezone.now()
         return super(Customer, self).save(*args, **kwargs)
 
-class Image(models.Model):
-    name = models.CharField(max_length=100)
-    url = models.CharField(max_length=65535)
+class Registration(models.Model):
+    customer = models.ForeignKey(Customer)
+    session = models.ForeignKey(Session, null=True)
+    program = models.ForeignKey(Program, null=True)
+    create_date = models.DateTimeField(editable=False)
+    modify_date = models.DateTimeField(editable=False)
+    
+    def save(self, *args, **kwargs):
+        ''' on save, update timestamp '''
+        if not self.id:
+            self.create_date = timezone.now()
+        self.modify_date = timezone.now()
+        return super(Registration, self).save(*args, **kwargs)
 
-    def __unicode__(self):
-        return self.image.name
+#class Image(models.Model):
+#   image = models.ImageField(upload_to="static/myapp")
+#    name = models.CharField(max_length=100, default="slick")
+#    url = models.CharField(max_length=65535, default="http://www.google.com")
+#
+#    def __unicode__(self):
+#        return self.name
