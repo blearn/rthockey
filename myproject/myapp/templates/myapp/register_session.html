@@ -15,7 +15,9 @@ $(document).ready(function() {
             <h2>Register for: {{ session.title }}</h2>
             <form method="post" class="register_form">
                 {% csrf_token %}
-                {{ form.as_p }}
+                <table>
+                {{ form.as_table }}
+                </table>
                 <input type="submit" value="Submit" class="button" class="button" />
             </form>
         </div>

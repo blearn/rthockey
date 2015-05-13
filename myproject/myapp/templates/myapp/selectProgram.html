@@ -10,7 +10,7 @@
             <ul>
             {% for program in available_programs_list %}
                 <li>
-                    <a href="{% url 'myapp:program' program.id %}">{{ program.title }}</a>
+                    <a href="{% url 'program' program.id %}">{{ program.title }}</a>
                     <!-- add start and end dates from sessions -->
                 </li>
             {% endfor %}

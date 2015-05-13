@@ -7,7 +7,7 @@
         <h2>{{ session.title }}</h2>
         <p>{{ session.description }}</p>
         <p>{{ session.start_date }} at {{ session.location.name }}</p>
-        <p>Drop-in cost: ${{ session.cost }}.00 (tax incl) <a href="{% url 'myapp:register_session' session.id %}">Register for this session</a></p>
+        <p>Drop-in cost: ${{ session.cost }}.00 (tax incl) <a href="{% url 'register_session' session.id %}">Register for this session</a></p>
         </div> <!-- /article -->
     </div> <!-- /main -->
 {% include "myapp/footer.html" %}

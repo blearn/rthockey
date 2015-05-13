@@ -1658,3 +1658,89 @@ cd myproject/
 ls
 python manage.py runserver 0.0.0.0:8000
 exit
+time
+calendar
+cd myproject/
+ls
+cd myapp/
+sudo vim static/myapp/style.css 
+ls
+git add .
+git status
+git commit -a -m 'Improvements to style and responsive design for mobile'
+cd ..
+ls
+git status
+git commit -a -m 'Improvements to style and responsive design for mobile'
+sudo git commit -a -m 'Improvements to style and responsive design for mobile'
+git push -u origin master
+cd myapp/
+ls
+sudo vim static/myapp/style.css 
+exit
+cd myproject/
+ls
+cd my
+cd myproject/
+ls
+sudo vim wsgi.py
+cd ..
+ls
+cd static/
+ls
+cd myapp/
+ls
+sudo vim style.css 
+sudo mv style.css old_style.css
+sudo mv position.css old_position.css
+ls
+cd ..
+ls
+cd ..
+ls
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+cd myproject/myapp/
+ls
+sudo vim templates/myapp/index.html 
+sudo vim templates/includes/tabs.html 
+sudo vim templates/myapp/contact.html 
+ls
+sudo vim templates/myapp/slideshow.html 
+sudo vim templates/myapp/gallery.html 
+sudo vim templates/myapp/index.html 
+sudo vim static/myapp/style.css 
+sudo vim templates/myapp/index.html 
+sudo vim static/myapp/style.css 
+exit
+source ~/env/bin/activate
+cd myproject/
+python manage.py runserver 0.0.0.0:8000
+exit
+cd myproject/myapp/
+ls
+sudo vim views.py
+sudo vim static/myapp/style.css 
+sudo vim views.py
+sudo vim templates/myapp/player.html 
+sudo vim models.py
+python ../manage.py makemigrations
+sudo vim templates/myapp/player.html 
+sudo vim views.py
+sudo vim ../myproject/settings.py
+sudo vim views.py
+exit
+cd myproject/
+source ~/env/bin/activate
+python manage.py runserver 0.0.0.0:8000
+exitg
+exit
+cd myproject/myapp/
+sudo vim templates/myapp/index.html 
+sudo vim models.py
+sudo vim ../myproject/settings.py
+exit

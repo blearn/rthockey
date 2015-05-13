@@ -1,4 +1,12 @@
-<div>
-    <p>Player Information</p>
-    {{ customer.firstname }}
-</div>
+{% include "myapp/header.html" %}
+    <div id="tabs">
+        {% include "includes/tabs.html" with active_tab='' %}
+    </div>
+    <div id="main" class="container">
+        <div class="outlined_normal" id="article">
+            <h2>Registration Confirmed</h2>
+            <p>Player Information</p>
+            {{ customer.firstname }} {{ customer.lastname }}
+        </div>
+    </div> <!-- /main -->
+{% include "myapp/footer.html" %}

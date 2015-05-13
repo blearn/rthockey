@@ -2,7 +2,8 @@ import os
 
 from django.http import Http404
 from django.http import HttpResponseRedirect
-
+from django.conf import settings
+from django.core.mail import send_mail
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
@@ -48,7 +49,11 @@ def register_session(request, session_id):
             if form.is_valid():
                 customer = form.save()
                 registration = Registration.objects.create(customer=customer, session=session)
-                return HttpResponseRedirect('/player/%s', customer.id)
+                #return HttpResponseRedirect('/player/%s', customer.id)
+                body='%s %s has been registered in %s' % (customer.firstname, customer.lastname, session.title)
+                to=customer.email
+                send_mail('Confirmation for RT Hockey Registration', body, settings.EMAIL_HOST_USER, [to], fail_silently=False)
+                return render(request, 'myapp/player.html', {'customer' : customer})
         else:
             form = RegisterForm()
     except Session.DoesNotExist:
@@ -63,7 +68,11 @@ def register_program(request, program_id):
             if form.is_valid():
                 customer = form.save()
                 registration = Registration.objects.create(customer=customer, program=program)
-                return HttpResponseRedirect('/player/%s', customer.id)
+                #return HttpResponseRedirect('/player/%s', customer.id)
+                body='%s %s has been registered in %s' % (customer.firstname, customer.lastname, program.title)
+                to=customer.email
+                send_mail('Confirmation for RT Hockey Registration', body, settings.EMAIL_HOST_USER, [to], fail_silently=False)
+                return render(request, 'myapp/player.html', {'customer' : customer})
         else:
             form = RegisterForm()
     except Program.DoesNotExist:

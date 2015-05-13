@@ -3,7 +3,7 @@ import os
 
 from django.db import models
 from django.utils import timezone
-
+from django.utils.encoding import force_bytes
 from django.conf import settings
 
 STATUS_CHOICES = (
@@ -90,6 +90,9 @@ class Customer(models.Model):
             self.create_date = timezone.now()
         self.modify_date = timezone.now()
         return super(Customer, self).save(*args, **kwargs)
+
+    def __str(self):
+        return force_bytes('%s %s' % (self.firstname, self.lastname))
 
 class Registration(models.Model):
     customer = models.ForeignKey(Customer)

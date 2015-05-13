@@ -7,7 +7,7 @@
         <h2>{{ program.title }}</h2>
         <p>{{ program.description }}</p>
         <input type="hidden" name="regtype" value="program{{program.id}}"/>
-        <p>Cost: ${{ program.cost }}.00 (tax incl) <a href="{% url 'myapp:register_program' program.id %}">Register for this program</a></p>
+        <p>Cost: ${{ program.cost }}.00 (tax incl) <a href="{% url 'register_program' program.id %}">Register for this program</a></p>
         {% if program_sessions_list %}
             <br/><br/><br/>
             <h2>Drop-In</h2>
@@ -15,7 +15,7 @@
             <ul>
             {% for session in program_sessions_list %}
                 <li>
-                    <a href="{% url 'myapp:session' session.id %}">Session {{ forloop.counter }}: {{ session.start_date }} at {{ session.location.name }}</a>
+                    <a href="{% url 'session' session.id %}">Session {{ forloop.counter }}: {{ session.start_date }} at {{ session.location.name }}</a>
                 </li>
             {% endfor %}
             </ul>
